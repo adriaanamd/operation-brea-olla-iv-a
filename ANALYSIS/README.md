@@ -1,6 +1,6 @@
 # Webinar evaluation analysis
 
-This directory contains the reproducible analysis for the IMRADC manuscript. The raw CSV in `data/` is read-only. The intended execution environment is Google Colab, not the local Windows Python installation. Open [`src/main.ipynb`](src/main.ipynb) in Colab, upload or mount the repository, and run the cells in order. The notebook installs the analysis dependencies inside the temporary Colab runtime and imports the same reusable pipeline used by the script.
+This directory contains the reproducible analysis for the IMRADC manuscript. The raw CSV in `data/` is read-only. The intended execution environment is Google Colab, not the local Windows Python installation. Open [`src/main.ipynb`](src/main.ipynb) in Colab and run the cells in order. The notebook verifies that the standard analysis packages are available in the remote runtime; it does not install packages into the local machine.
 
 Important: opening the notebook in VS Code does not make the local workspace visible to a Colab kernel. The editor is local, but execution happens on a remote Jupyter server. A Windows path such as `C:\\Users\\...` will therefore not work.
 
@@ -22,4 +22,4 @@ The pipeline uses the 13 experience statements as the primary Likert set. It rep
 
 Open-ended answers are coded with the codebook and de-identified coding decisions in `src/themes/`. Theme counts describe reported response patterns; they are not measures of objective learning.
 
-The `src/main.ipynb` notebook imports the same pipeline used by the command-line run so the manuscript numbers do not depend on a separate manual notebook calculation. No local package installation is required for this project.
+The notebook is organized in CRISP-DM phases: business understanding, data understanding, data preparation, descriptive modeling/analysis, evaluation, and deployment. It produces additional auditable tables for data profiling, response coverage, bootstrap mean intervals, Wilson agreement intervals, item rankings, the normalized composite, institutional reach, speaker-clarity cross-tabs, normalization sensitivity, thematic counts by prompt, validation checks, and decision prompts. The notebook imports the same pipeline used by the command-line run so the manuscript numbers do not depend on a separate manual notebook calculation. No local package installation is required for this project.
