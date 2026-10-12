@@ -1,0 +1,5 @@
+# Implications
+
+The findings suggest three practical implications for future webinar design. First, explanations of AI-assisted development should keep the verification responsibility visible: participants need to see how a requirement, generated suggestion, test, and review decision relate to one another. Second, future sessions could reserve time for additional live examples, deliberately flawed or buggy code, and short hands-on activities because these were recurring requests in the open-ended feedback. Third, technical checks for microphone quality, connection stability, and screen-sharing should be included in the delivery checklist because one response explicitly identified a technical problem.
+
+For evaluation, the mixed-methods instrument was useful because the ratings provided a compact summary while the open-ended prompts exposed specific strengths and improvement requests. Future evaluations could add a short objective task or pre/post measure if the goal changes from documenting experience to estimating learning. Any such change would require a new design and should not be inferred from the present post-event questionnaire.

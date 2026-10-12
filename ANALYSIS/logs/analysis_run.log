@@ -1,0 +1,9 @@
+Colab execution record
+======================
+
+Local package installation and local pipeline execution were intentionally not performed because the designated runtime is Google Colab and the user has limited local RAM.
+
+Status: PENDING_COLAB_EXECUTION
+Expected input: ANALYSIS/data/CodeCrafters_ Tech Beyond the Screen – Day 1 Afternoon Session Evaluation.csv
+Expected normalization: two internally inconsistent rows; 13 primary Likert items only
+Expected outputs: ANALYSIS/outputs/tables, ANALYSIS/outputs/figures, ANALYSIS/analysis_manifest.json

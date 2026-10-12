@@ -12,8 +12,8 @@ Use the following skills for every manuscript session. Do not treat them as opti
    - `ars/academic-pipeline/WORKFLOW.md` for an explicitly requested end-to-end research-to-paper run;
    - the ARS citation-check route for reference and citation audits.
 2. **Manuscript prose humanization:** always activate `$humanizer` alongside ARS for drafting, revising, or reviewing manuscript text. Apply it after evidence and citation checks so that the prose remains natural without weakening claims, hedges, or uncertainty markers.
-3. **Chapter 3 data work or Chapter 4 quantitative-result interpretation:** activate `$data-analyst` alongside ARS. Apply its analyst powers: establish the objective and decision context, inventory data and grain, validate quality and exclusions, define metrics and denominators, quantify uncertainty, preserve reproducibility, and report limitations and actionable implications.
-4. **Pure narrative intake, Chapter 1 prose, or Chapter 2 prose synthesis:** `$ars-codex:academic-research-suite` and `$humanizer` remain mandatory; `$data-analyst` is not required unless the task includes a dataset, metric, statistical claim, or quantitative interpretation.
+3. **Chapter 2 analysis methods or Chapter 3 quantitative results/discussion:** activate `$data-analyst` alongside ARS. Apply its analyst powers: establish the objective and decision context, inventory data and grain, validate quality and exclusions, define metrics and denominators, quantify uncertainty, preserve reproducibility, and report limitations and actionable implications.
+4. **Pure narrative intake or Chapter 1 prose:** `$ars-codex:academic-research-suite` and `$humanizer` remain mandatory; `$data-analyst` is not required unless the task includes a dataset, metric, statistical claim, or quantitative interpretation.
 
 Activation order is ARS first, then Data Analyst when data work applies. Announce the active skill and selected workflow in the progress update. If the runtime cannot literally invoke a named selector, follow the corresponding skill file and state that limitation; never silently skip the research or analyst controls.
 
@@ -32,7 +32,7 @@ The agent must never fill an evidence gap with a plausible detail. Missing infor
 
 ### Phase 0 — Inspect before writing
 
-1. Activate `$ars-codex:academic-research-suite` and select the appropriate workflow before manuscript drafting or revision. Activate `$data-analyst` as well when Chapter 3 or Chapter 4 quantitative work applies.
+1. Activate `$ars-codex:academic-research-suite` and select the appropriate workflow before manuscript drafting or revision. Activate `$data-analyst` as well when Chapter 2 analysis methods or Chapter 3 quantitative work applies.
 2. Read `INSTRUCTIONS.md`, `MANUSCRIPT-SPECS.md`, and `REFERENCES.md`.
 3. Inspect the relevant chapter folder and the `ANALYSIS/` directory.
 4. Identify existing evidence files without changing or overwriting them.
@@ -78,26 +78,21 @@ Work on one chapter part file at a time. Keep each part separate inside its chap
 
 Write the background, objectives/OOTS, problem, significance, scope, and terms as evidence-based narrative. Use scholarly and authoritative sources for general claims. Do not perform computational analysis here. The Background file must reach at least 30 distinct verified sources.
 
-#### Chapter 2 — Literature Review
+#### Chapter 2 — Methodology
 
-Synthesize the literature, related studies, frameworks, and research gap. Do not write a citation list disguised as synthesis. Do not perform webinar-data analysis here. The Literature Review file must reach at least 70 distinct verified sources by itself, and every source must be recorded in `REFERENCES.md`.
+Document the convergent mixed-methods, nonexperimental, post-activity evaluation design; context; respondents and sampling; instruments; data gathering; quantitative normalization; thematic coding; integration; and ethics. Use Python for data preparation, de-identification support, response coding, descriptive statistics, and generated tables or figures. Store scripts, notebooks, configuration, logs, and outputs under `ANALYSIS/`. Document the actual method used; never claim a procedure that did not occur.
 
-#### Chapter 3 — Methodology
+#### Chapter 3 — Results and Discussion
 
-This is the computational-analysis chapter. Use Python for data preparation, de-identification support, response coding, descriptive statistics, statistical tests, and derived tables or figures. Store scripts, notebooks, configuration, logs, and outputs under `ANALYSIS/`. Document the actual method used; never claim a procedure that did not occur.
-
-#### Chapter 4 — Results and Discussion
-
-Report and interpret the evidence produced by the webinar and Chapter 3. Do not create new spreadsheet calculations or undocumented manual statistics in Chapter 4. Use the verified Python outputs from `ANALYSIS/` for numeric results. Narrative interpretation, comparison with Chapter 2, implications, and limitations do not require Python, but they must remain traceable to evidence.
+Report and interpret the evidence produced by the webinar and the Chapter 2 methods. Do not create new spreadsheet calculations or undocumented manual statistics in Chapter 3. Use verified Python outputs from `ANALYSIS/` for numeric results. Integrate Likert summaries and thematic findings while distinguishing participant perception from objective learning or causal effects.
 
 ## 4. Analysis boundary
 
 The rule is chapter-specific:
 
-- Python is mandatory for Chapter 3 computational work and for any numeric result that will be reported later.
-- Chapters 1 and 2 use source reading, citation management, and prose synthesis; they do not require Python analysis.
-- Chapter 4 consumes and interprets Chapter 3 outputs; it does not introduce unsupported calculations.
-- If a Chapter 1, 2, or 4 task unexpectedly requires a derived numeric result, stop and route that computation through a Python artifact in `ANALYSIS/` before reporting it.
+- Python is mandatory for Chapter 2 computational methods and for every numeric result reported in Chapter 3.
+- Chapter 1 remains source-based; Chapter 2 documents the analysis pipeline; Chapter 3 consumes verified outputs and does not introduce unsupported calculations.
+- If any chapter unexpectedly requires a derived numeric result, stop and route that computation through a Python artifact in `ANALYSIS/` before reporting it.
 
 Raw data must remain read-only. Use relative paths, record package versions and random seeds, and do not commit secrets or unnecessary personal identifiers.
 
@@ -108,7 +103,7 @@ Before a chapter is considered ready:
 1. Every external claim has an appropriate citation or verified source link.
 2. Every in-text citation has a complete record in `REFERENCES.md`.
 3. The Chapter 1 Background file contains at least 30 distinct, verifiable sources.
-4. The Chapter 2 Literature Review file contains at least 70 distinct, verifiable sources on its own.
+4. Chapter 2 methodology citations are complete and accurate where used; Chapter 2 is not a literature-review chapter under the approved IMRADC structure.
 5. No invented source, DOI, URL, quotation, author, title, or publication detail appears anywhere.
 6. Repeated mentions of the same work are not counted as additional sources.
 7. All citations used in the manuscript must be from 2022 or later. Older sources may be discussed only as uncited historical context or replaced with a current source that supports the same claim.
@@ -144,9 +139,9 @@ Before declaring a manuscript task complete, verify:
 
 - [ ] The requested part is in the correct chapter folder and remains a separate `.md` file.
 - [ ] The fact ledger supports every event-specific claim.
-- [ ] Chapter 3 numeric work is reproducible from Python artifacts in `ANALYSIS/`.
-- [ ] Chapter 4 numeric claims match the stored Chapter 3 outputs.
-- [ ] Chapter 1 and Chapter 2 citation minimums are satisfied when those sections are complete.
+- [ ] Chapter 2 analysis methods and Chapter 3 numeric work are reproducible from Python artifacts in `ANALYSIS/`.
+- [ ] Chapter 3 numeric claims match the stored analysis outputs.
+- [ ] Chapter 1 citation minimum is satisfied; Chapter 2 methodology citations are complete and accurate.
 - [ ] All citations are recorded accurately in `REFERENCES.md`.
 - [ ] Unverified details, limitations, missingness, and uncertainty are visible.
 - [ ] No participant-identifying information or secrets were added.

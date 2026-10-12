@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "unit_of_analysis": "one respondent answer to one open-ended prompt",
+  "multiple_codes_allowed": true,
+  "codes": [
+    {"code_id": "LEARNING_TDD_TESTING", "label": "TDD or software testing", "definition": "Mentions TDD, tests, code review, validation, or testing practice as learning."},
+    {"code_id": "LEARNING_AI_USE", "label": "AI use", "definition": "Mentions AI tools, AI-assisted coding, or responsible AI use as learning."},
+    {"code_id": "LEARNING_SOFTWARE_DEVELOPMENT", "label": "Software development", "definition": "Mentions broader software, programming, code, frameworks, APIs, or development learning."},
+    {"code_id": "VALUED_DEMONSTRATION", "label": "Demonstration", "definition": "Values live coding, practical demonstrations, actual tools, or examples."},
+    {"code_id": "VALUED_EXPLANATION", "label": "Explanation and clarity", "definition": "Values clear explanations, understandable terms, visuals, or diagrams."},
+    {"code_id": "VALUED_PRACTICALITY", "label": "Practical relevance", "definition": "Values applicability, hands-on learning, or real-world usefulness."},
+    {"code_id": "VALUED_SPEAKER", "label": "Speaker", "definition": "Comments positively on speaker knowledge, confidence, or presentation."},
+    {"code_id": "ENGAGEMENT_INTERACTIVITY", "label": "Engagement", "definition": "Mentions interaction, engagement, discussion, or requests for activities."},
+    {"code_id": "IMPROVEMENT_MORE_EXAMPLES", "label": "More examples", "definition": "Requests additional examples, demonstrations, or buggy/bad-code cases."},
+    {"code_id": "IMPROVEMENT_MORE_INTERACTION", "label": "More interaction", "definition": "Requests activities, participation, or greater interactivity."},
+    {"code_id": "IMPROVEMENT_TECHNICAL_QUALITY", "label": "Technical quality", "definition": "Mentions microphone, connection, audio, video, or technical quality."},
+    {"code_id": "IMPROVEMENT_MORE_DEPTH", "label": "More depth", "definition": "Requests longer, more detailed, or more advanced coverage."},
+    {"code_id": "NO_SUBSTANTIVE_RESPONSE", "label": "No substantive response", "definition": "Blank, N/A, none, no suggestion, punctuation-only, or equivalent."},
+    {"code_id": "OTHER_RELEVANT_FEEDBACK", "label": "Other relevant feedback", "definition": "Relevant feedback not represented by another code."}
+  ]
+}
