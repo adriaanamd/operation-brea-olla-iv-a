@@ -1,0 +1,251 @@
+respondent_id,source_field,code_id,coding_note
+R001,learning_value,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R001,liked_most,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R001,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R001,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R002,learning_value,LEARNING_AI_USE,AI learning
+R002,liked_most,LEARNING_AI_USE,AI topic valued
+R002,improvements,IMPROVEMENT_MORE_DEPTH,request for more topics
+R002,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R003,learning_value,NO_SUBSTANTIVE_RESPONSE,nothing specific
+R003,liked_most,LEARNING_AI_USE,AI lecture valued
+R003,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R003,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R004,learning_value,LEARNING_AI_USE,AI learning
+R004,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,software learning
+R004,liked_most,LEARNING_TDD_TESTING,TDD topic valued
+R004,improvements,IMPROVEMENT_MORE_DEPTH,request for more information
+R004,additional_comments,OTHER_RELEVANT_FEEDBACK,positive general comment
+R005,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,design learning
+R005,liked_most,NO_SUBSTANTIVE_RESPONSE,affirmation without detail
+R005,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R005,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R006,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,Vite/tool learning
+R006,liked_most,VALUED_SPEAKER,speaker valued
+R006,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R006,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R007,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,technology learning
+R007,liked_most,VALUED_PRACTICALITY,proper technology use valued
+R007,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R007,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R008,learning_value,LEARNING_AI_USE,AI skills
+R008,liked_most,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R008,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R008,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R009,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,programming learning
+R009,liked_most,VALUED_EXPLANATION,clear explanation valued
+R009,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R009,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R010,learning_value,LEARNING_AI_USE,proper AI use
+R010,liked_most,LEARNING_AI_USE,AI problem-solving valued
+R010,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R010,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R011,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,coding learning
+R011,liked_most,VALUED_DEMONSTRATION,coding demonstration valued
+R011,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R011,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R012,learning_value,LEARNING_AI_USE,AI learning
+R012,liked_most,VALUED_SPEAKER,knowledgeable speaker valued
+R012,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R012,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R013,learning_value,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R013,liked_most,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R013,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R013,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R014,learning_value,LEARNING_AI_USE,AI integration learning
+R014,liked_most,VALUED_DEMONSTRATION,step-by-step examples valued
+R014,liked_most,VALUED_EXPLANATION,clear visual explanation valued
+R014,liked_most,LEARNING_AI_USE,AI integration valued
+R014,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R014,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R015,learning_value,LEARNING_TDD_TESTING,software testing learning
+R015,liked_most,LEARNING_AI_USE,AI assistants valued
+R015,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R015,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R016,learning_value,LEARNING_AI_USE,human checking of AI-assisted code
+R016,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,coding practice
+R016,liked_most,LEARNING_AI_USE,responsible AI use
+R016,liked_most,LEARNING_TDD_TESTING,miscode prevention
+R016,improvements,OTHER_RELEVANT_FEEDBACK,request for proper coding
+R016,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R017,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,problem-solving and software learning
+R017,learning_value,VALUED_PRACTICALITY,professional application
+R017,liked_most,VALUED_SPEAKER,engaging presentation
+R017,liked_most,VALUED_EXPLANATION,complex ideas explained clearly
+R017,improvements,IMPROVEMENT_MORE_INTERACTION,hands-on workshop request
+R017,improvements,IMPROVEMENT_MORE_EXAMPLES,follow-up resources and examples
+R017,additional_comments,IMPROVEMENT_MORE_INTERACTION,hands-on follow-up request
+R018,learning_value,LEARNING_AI_USE,AI in software development
+R018,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,software efficiency
+R018,liked_most,VALUED_EXPLANATION,clear discussion
+R018,liked_most,LEARNING_AI_USE,AI use valued
+R018,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R018,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R019,learning_value,LEARNING_AI_USE,AI coding
+R019,learning_value,LEARNING_TDD_TESTING,TDD learning
+R019,liked_most,VALUED_DEMONSTRATION,demo valued
+R019,liked_most,LEARNING_AI_USE,current AI relevance
+R019,improvements,IMPROVEMENT_MORE_EXAMPLES,more demonstrations requested
+R019,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R020,learning_value,NO_SUBSTANTIVE_RESPONSE,prefer not to say
+R020,liked_most,NO_SUBSTANTIVE_RESPONSE,everything without detail
+R020,improvements,IMPROVEMENT_MORE_DEPTH,more sessions requested
+R020,additional_comments,OTHER_RELEVANT_FEEDBACK,positive general comment
+R021,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,software development learning
+R021,liked_most,VALUED_EXPLANATION,detailed explanation valued
+R021,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R021,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R022,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,software development learning
+R022,learning_value,LEARNING_TDD_TESTING,code review learning
+R022,liked_most,LEARNING_AI_USE,AI assistance valued
+R022,improvements,IMPROVEMENT_MORE_INTERACTION,engaging activity request
+R022,improvements,IMPROVEMENT_MORE_EXAMPLES,showcase request
+R022,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R023,learning_value,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R023,liked_most,VALUED_DEMONSTRATION,interactive example valued
+R023,liked_most,VALUED_EXPLANATION,outcome explanation valued
+R023,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R023,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R024,learning_value,LEARNING_AI_USE,AI coding agents
+R024,learning_value,LEARNING_TDD_TESTING,Red-Green-Refactor learning
+R024,liked_most,LEARNING_AI_USE,AI coding agents valued
+R024,liked_most,VALUED_EXPLANATION,instructions and skills explained
+R024,improvements,IMPROVEMENT_MORE_EXAMPLES,live demonstrations requested
+R024,improvements,IMPROVEMENT_MORE_INTERACTION,hands-on activity requested
+R024,additional_comments,OTHER_RELEVANT_FEEDBACK,positive informative comment
+R025,learning_value,LEARNING_AI_USE,AI-assisted testing
+R025,learning_value,LEARNING_TDD_TESTING,unit testing and coverage
+R025,liked_most,LEARNING_AI_USE,AI-assisted testing valued
+R025,liked_most,VALUED_PRACTICALITY,quality assurance application
+R025,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R025,additional_comments,OTHER_RELEVANT_FEEDBACK,positive general comment
+R026,learning_value,LEARNING_AI_USE,AI use
+R026,liked_most,NO_SUBSTANTIVE_RESPONSE,all without detail
+R026,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R026,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R027,learning_value,LEARNING_AI_USE,human checking of AI code
+R027,learning_value,LEARNING_TDD_TESTING,code verification
+R027,liked_most,VALUED_SPEAKER,knowledgeable speaker
+R027,liked_most,VALUED_EXPLANATION,clear delivery
+R027,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R027,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R028,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,software architecture and backend systems
+R028,liked_most,VALUED_EXPLANATION,clear explanation of complex concepts
+R028,liked_most,VALUED_SPEAKER,engaging delivery
+R028,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R028,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R029,learning_value,LEARNING_AI_USE,AI-assisted code review
+R029,learning_value,LEARNING_TDD_TESTING,code checking workflow
+R029,liked_most,LEARNING_AI_USE,proper AI use
+R029,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R029,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R030,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,programming learning
+R030,liked_most,VALUED_DEMONSTRATION,actual program demonstration
+R030,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R030,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R031,learning_value,LEARNING_TDD_TESTING,TDD program
+R031,liked_most,LEARNING_TDD_TESTING,TDD explanation
+R031,improvements,NO_SUBSTANTIVE_RESPONSE,no suggestion
+R031,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R032,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,data analytics and code organization
+R032,liked_most,LEARNING_SOFTWARE_DEVELOPMENT,data analytics valued
+R032,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R032,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R033,learning_value,OTHER_RELEVANT_FEEDBACK,general new learning
+R033,liked_most,OTHER_RELEVANT_FEEDBACK,informative response
+R033,improvements,IMPROVEMENT_MORE_EXAMPLES,more examples requested
+R033,additional_comments,OTHER_RELEVANT_FEEDBACK,positive general comment
+R034,learning_value,LEARNING_AI_USE,artificial intelligence learning
+R034,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,data analytics and software learning
+R034,liked_most,VALUED_EXPLANATION,presentation valued
+R034,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R034,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R035,learning_value,VALUED_PRACTICALITY,real-world skills
+R035,liked_most,VALUED_EXPLANATION,clarity valued
+R035,improvements,IMPROVEMENT_MORE_EXAMPLES,more examples requested
+R035,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R036,learning_value,LEARNING_TDD_TESTING,test-first practice
+R036,liked_most,VALUED_EXPLANATION,comparison and diagram valued
+R036,liked_most,LEARNING_TDD_TESTING,TDD explanation valued
+R036,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R036,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R037,learning_value,LEARNING_AI_USE,AI as code review tool
+R037,learning_value,LEARNING_TDD_TESTING,code review and validation
+R037,liked_most,VALUED_EXPLANATION,accessible terms valued
+R037,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R037,additional_comments,VALUED_PRACTICALITY,applicability to projects
+R038,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,programming learning
+R038,liked_most,VALUED_DEMONSTRATION,code demonstration
+R038,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R038,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R039,learning_value,LEARNING_AI_USE,AI in code reviews
+R039,learning_value,LEARNING_TDD_TESTING,code review and validation
+R039,liked_most,LEARNING_TDD_TESTING,code review discussion
+R039,liked_most,VALUED_EXPLANATION,discussion valued
+R039,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R039,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R040,learning_value,LEARNING_TDD_TESTING,Red-Green-Refactor and tests
+R040,liked_most,VALUED_DEMONSTRATION,actual tools and use
+R040,improvements,IMPROVEMENT_MORE_EXAMPLES,buggy-code examples requested
+R040,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R041,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,program learning
+R041,liked_most,VALUED_EXPLANATION,easy explanation valued
+R041,liked_most,VALUED_PRACTICALITY,consistent tool selection valued
+R041,improvements,NO_SUBSTANTIVE_RESPONSE,positive response
+R041,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R042,learning_value,LEARNING_TDD_TESTING,structured code review and automated tests
+R042,liked_most,VALUED_DEMONSTRATION,examples and visuals valued
+R042,liked_most,VALUED_EXPLANATION,visual explanation valued
+R042,improvements,NO_SUBSTANTIVE_RESPONSE,no suggestion
+R042,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R043,learning_value,LEARNING_AI_USE,AI coding agents
+R043,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,software development learning
+R043,liked_most,LEARNING_AI_USE,AI tools overview valued
+R043,liked_most,VALUED_EXPLANATION,comprehensive explanation valued
+R043,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R043,additional_comments,IMPROVEMENT_MORE_DEPTH,advanced future coverage requested
+R044,learning_value,LEARNING_AI_USE,AI software development
+R044,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,software development learning
+R044,liked_most,LEARNING_TDD_TESTING,TDD topic valued
+R044,improvements,IMPROVEMENT_TECHNICAL_QUALITY,microphone and meeting quality
+R044,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R045,learning_value,LEARNING_AI_USE,AI as development tool
+R045,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,software development learning
+R045,learning_value,VALUED_PRACTICALITY,application to reliable software
+R045,liked_most,VALUED_DEMONSTRATION,demonstration valued
+R045,liked_most,VALUED_PRACTICALITY,practical depth valued
+R045,improvements,IMPROVEMENT_MORE_INTERACTION,light interactive activities requested
+R045,additional_comments,OTHER_RELEVANT_FEEDBACK,positive closing comment
+R046,learning_value,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R046,liked_most,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R046,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R046,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R047,learning_value,LEARNING_SOFTWARE_DEVELOPMENT,software development and tools
+R047,learning_value,VALUED_PRACTICALITY,real-world application
+R047,liked_most,VALUED_DEMONSTRATION,live coding and examples
+R047,liked_most,VALUED_PRACTICALITY,practical approach valued
+R047,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R047,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R048,learning_value,NO_SUBSTANTIVE_RESPONSE,punctuation-only response
+R048,liked_most,NO_SUBSTANTIVE_RESPONSE,punctuation-only response
+R048,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R048,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R049,learning_value,LEARNING_AI_USE,AI-generated code review
+R049,learning_value,LEARNING_TDD_TESTING,testing AI-generated code
+R049,liked_most,VALUED_DEMONSTRATION,code review demonstration
+R049,liked_most,LEARNING_TDD_TESTING,code review valued
+R049,improvements,IMPROVEMENT_MORE_INTERACTION,interactive activities requested
+R049,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R050,learning_value,NO_SUBSTANTIVE_RESPONSE,general response without detail
+R050,liked_most,NO_SUBSTANTIVE_RESPONSE,general response without detail
+R050,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R050,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R051,learning_value,NO_SUBSTANTIVE_RESPONSE,non-specific response
+R051,liked_most,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R051,improvements,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R051,additional_comments,NO_SUBSTANTIVE_RESPONSE,non-substantive response
+R052,learning_value,LEARNING_AI_USE,AI integration with coding
+R052,liked_most,LEARNING_AI_USE,ethical and efficient AI use
+R052,liked_most,VALUED_PRACTICALITY,ethical application valued
+R052,improvements,NO_SUBSTANTIVE_RESPONSE,no specific suggestion
+R052,additional_comments,IMPROVEMENT_TECHNICAL_QUALITY,connection issue reported
