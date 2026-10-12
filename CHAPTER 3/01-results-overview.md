@@ -1,7 +1,29 @@
 # Results overview
 
-This chapter reports the evidence produced by the Chapter 2 pipeline and interprets it within the limits of a one-event, post-activity evaluation. The supplied export contained 52 available evaluation rows. The quantitative strand consisted of 13 primary Likert statements plus separate overall-rating and satisfaction items. The qualitative strand consisted of four open-ended prompts.
+This chapter reports the evidence produced by the reproducible analysis pipeline and interprets it within the limits of a one-event, post-activity evaluation. The analyzed export contained 52 available evaluation rows and 24 source fields. The quantitative strand comprised 13 primary Likert statements, one overall-rating item, and one satisfaction item. The qualitative strand comprised four open-ended prompts. The full data profile and validation record are available in [`crispdm_data_profile.csv`](../ANALYSIS/outputs/tables/crispdm_data_profile.csv) and [`crispdm_validation_summary.csv`](../ANALYSIS/outputs/tables/crispdm_validation_summary.csv).
 
-Two rows were flagged because all 13 primary Likert values were recorded as `1` while both summary ratings were positive. Following the pre-specified data-quality rule, the pipeline reverse-normalized only the 13 primary items for those rows and preserved the overall and satisfaction values. The field-level changes are reported in [`normalization_audit.csv`](../ANALYSIS/outputs/tables/normalization_audit.csv).
+## Analytic dataset and quality checks
 
-The remaining quantitative results should be read from the Colab-generated outputs: [`likert_item_summary.csv`](../ANALYSIS/outputs/tables/likert_item_summary.csv), [`likert_distributions.csv`](../ANALYSIS/outputs/tables/likert_distributions.csv), and [`overall_satisfaction_summary.csv`](../ANALYSIS/outputs/tables/overall_satisfaction_summary.csv). Because the Colab run has not been executed in this environment, any manuscript sentence requiring an exact mean, standard deviation, percentage, or thematic count remains marked for confirmation in the results-by-question file.
+All 52 rows contained valid, in-range responses for the 15 analyzed rating fields. The pipeline reported zero missing rating cells, zero out-of-range cells, and zero duplicate generated respondent IDs. Two duplicate timestamp values were observed as a diagnostic condition, but timestamps were not used as respondent identifiers or analytic keys. The analysis therefore retained all 52 rows. The input file, Python version, package version, input hash, and output inventory are recorded in [`analysis_manifest.json`](../ANALYSIS/outputs/analysis_manifest.json).
+
+Two response-pattern cases were flagged because all 13 primary Likert items were recorded as `1` while both summary ratings were at least `4`. Following the pre-specified data-quality rule, the pipeline reverse-normalized only the 13 primary items for those two rows using `6 - raw`. The overall-rating and satisfaction values were retained as anchors. This produced 26 field-level corrections, all from raw value `1` to normalized value `5`; no participant identifiers are reported in this chapter. The complete audit is available in [`normalization_audit.csv`](../ANALYSIS/outputs/tables/normalization_audit.csv), and the raw-versus-normalized comparison is available in [`crispdm_normalization_sensitivity.csv`](../ANALYSIS/outputs/tables/crispdm_normalization_sensitivity.csv).
+
+## Initial quantitative profile
+
+The normalized 13-item experience composite had a mean of **4.6598** (SD = **0.4390**, median = **4.9231**, *n* = **52**). Using the pre-specified agreement threshold of 4 or 5, **94.23%** of respondents had a composite score at or above that threshold. The separate summary items also showed favorable responses: overall session rating had a mean of **4.6154** (SD = **0.5297**), with **98.08%** selecting 4 or 5 and **63.46%** selecting 5; satisfaction had a mean of **4.6731** (SD = **0.5134**), with **98.08%** selecting 4 or 5 and **69.23%** selecting 5. These figures describe reported post-event perceptions, not objective learning or causal effects.
+
+| Evidence stream | Result | Source output |
+| --- | ---: | --- |
+| Available evaluation rows | 52 | [`data_quality_summary.csv`](../ANALYSIS/outputs/tables/data_quality_summary.csv) |
+| Primary Likert items | 13 | [`crispdm_data_profile.csv`](../ANALYSIS/outputs/tables/crispdm_data_profile.csv) |
+| Separate summary items | 2 | [`overall_satisfaction_summary.csv`](../ANALYSIS/outputs/tables/overall_satisfaction_summary.csv) |
+| Open-ended prompts | 4 | [`crispdm_data_profile.csv`](../ANALYSIS/outputs/tables/crispdm_data_profile.csv) |
+| Normalized primary-item composite mean | 4.6598 | [`crispdm_composite_summary.csv`](../ANALYSIS/outputs/tables/crispdm_composite_summary.csv) |
+| Overall rating: agreement (4 or 5) | 98.08% (51/52) | [`overall_satisfaction_summary.csv`](../ANALYSIS/outputs/tables/overall_satisfaction_summary.csv) |
+| Satisfaction: agreement (4 or 5) | 98.08% (51/52) | [`overall_satisfaction_summary.csv`](../ANALYSIS/outputs/tables/overall_satisfaction_summary.csv) |
+
+The strongest primary item was **“Presentation materials were clear and organized”**, with a mean of **4.7308**, SD = **0.4897**, and **98.08%** agreement. The lowest primary-item mean was recorded for **“Speakers explained the topics clearly”**, at **4.5577** (SD = **0.5744**) and **96.15%** agreement. The difference between these values is small in practical terms, so the ranking is used to identify relative emphasis for discussion rather than to declare a substantial performance gap. Item-level estimates, response distributions, and bootstrap intervals are reported in [`crispdm_quantitative_metrics.csv`](../ANALYSIS/outputs/tables/crispdm_quantitative_metrics.csv) and [`likert_distributions.csv`](../ANALYSIS/outputs/tables/likert_distributions.csv).
+
+## Organization of the remaining results
+
+The next part presents findings by research question, beginning with the item-level Likert distributions and summary ratings, followed by the respondent and institutional profile, the speaker-clarity cross-tab, and the analyst-coded open-ended themes. The discussion then interprets convergence and divergence between the quantitative and qualitative strands. All numerical claims remain linked to the generated tables, while claims about learning, transfer, or causal impact remain outside the design's evidentiary scope.
