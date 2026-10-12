@@ -1,0 +1,7 @@
+# Results overview
+
+This chapter reports the evidence produced by the Chapter 2 pipeline and interprets it within the limits of a one-event, post-activity evaluation. The supplied export contained 52 available evaluation rows. The quantitative strand consisted of 13 primary Likert statements plus separate overall-rating and satisfaction items. The qualitative strand consisted of four open-ended prompts.
+
+Two rows were flagged because all 13 primary Likert values were recorded as `1` while both summary ratings were positive. Following the pre-specified data-quality rule, the pipeline reverse-normalized only the 13 primary items for those rows and preserved the overall and satisfaction values. The field-level changes are reported in [`normalization_audit.csv`](../ANALYSIS/outputs/tables/normalization_audit.csv).
+
+The remaining quantitative results should be read from the Colab-generated outputs: [`likert_item_summary.csv`](../ANALYSIS/outputs/tables/likert_item_summary.csv), [`likert_distributions.csv`](../ANALYSIS/outputs/tables/likert_distributions.csv), and [`overall_satisfaction_summary.csv`](../ANALYSIS/outputs/tables/overall_satisfaction_summary.csv). Because the Colab run has not been executed in this environment, any manuscript sentence requiring an exact mean, standard deviation, percentage, or thematic count remains marked for confirmation in the results-by-question file.
