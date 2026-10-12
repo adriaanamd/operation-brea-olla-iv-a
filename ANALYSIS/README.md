@@ -2,15 +2,9 @@
 
 This directory contains the reproducible analysis for the IMRADC manuscript. The raw CSV in `data/` is read-only. The intended execution environment is Google Colab, not the local Windows Python installation. Open [`src/main.ipynb`](src/main.ipynb) in Colab, upload or mount the repository, and run the cells in order. The notebook installs the analysis dependencies inside the temporary Colab runtime and imports the same reusable pipeline used by the script.
 
-Important: opening the notebook in VS Code does not make the local workspace visible to a Colab kernel. The editor is local, but execution happens on a remote Jupyter server. A Windows path such as `C:\\Users\\...` will therefore not work as `PROJECT_ROOT`.
+Important: opening the notebook in VS Code does not make the local workspace visible to a Colab kernel. The editor is local, but execution happens on a remote Jupyter server. A Windows path such as `C:\\Users\\...` will therefore not work.
 
-Before running `src/main.ipynb`, use the VS Code command `Colab: Mount Google Drive to Server...` and keep a copy of this repository in Drive. Then set `REMOTE_PROJECT_ROOT` in the setup cell to the mounted path, for example:
-
-```python
-REMOTE_PROJECT_ROOT = Path('/content/drive/MyDrive/Organized Webminar manuscript')
-```
-
-Alternatively, leave `REMOTE_PROJECT_ROOT = None` and upload a ZIP containing `ANALYSIS/src` and the desensitized CSV when the setup cell prompts for it. The ZIP is extracted into the remote Colab runtime; it does not alter the local VS Code workspace.
+The setup cell avoids Google Drive. It clones the committed public repository into the temporary Colab runtime using the configured HTTPS URL and `master` branch. Push the current commit before running the notebook. If the repository is private or the commit has not been pushed, upload a ZIP containing `ANALYSIS/src` and the desensitized CSV when prompted. Never put a GitHub token or password in the notebook.
 
 The notebook expects the desensitized CSV at:
 
