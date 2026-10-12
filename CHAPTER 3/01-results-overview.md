@@ -2,6 +2,19 @@
 
 This chapter reports the evidence produced by the reproducible analysis pipeline and interprets it within the limits of a one-event, post-activity evaluation. The analyzed export contained 52 available evaluation rows and 24 source fields. The quantitative strand comprised 13 primary Likert statements, one overall-rating item, and one satisfaction item. The qualitative strand comprised four open-ended prompts. The full data profile and validation record are available in [`crispdm_data_profile.csv`](../ANALYSIS/outputs/tables/crispdm_data_profile.csv) and [`crispdm_validation_summary.csv`](../ANALYSIS/outputs/tables/crispdm_validation_summary.csv).
 
+## CRISP-DM results trace
+
+CRISP-DM was used as the analysis-to-decision structure for this chapter. Because the study was a descriptive, nonexperimental evaluation, the “modeling” phase consisted of descriptive summaries and exploratory cross-tabulation rather than predictive machine learning. The phases below show how each result was produced and where its evidence is stored.
+
+| CRISP-DM phase | Chapter 3 use | Traceable evidence |
+| --- | --- | --- |
+| Business understanding | Translate the evaluation objective into questions about perceived session quality, participant voice, and actionable improvement areas. | [`crispdm_decision_prompts.csv`](../ANALYSIS/outputs/tables/crispdm_decision_prompts.csv) |
+| Data understanding | Establish the dataset grain, available fields, rating items, open-ended prompts, and response-quality profile. | [`crispdm_data_profile.csv`](../ANALYSIS/outputs/tables/crispdm_data_profile.csv), [`crispdm_validation_summary.csv`](../ANALYSIS/outputs/tables/crispdm_validation_summary.csv) |
+| Data preparation | Parse the rating fields, assign de-identified row IDs, preserve the raw file, and normalize the two flagged matrix responses while retaining summary anchors. | [`normalization_audit.csv`](../ANALYSIS/outputs/tables/normalization_audit.csv), [`crispdm_normalization_sensitivity.csv`](../ANALYSIS/outputs/tables/crispdm_normalization_sensitivity.csv) |
+| Modeling and analysis | Generate Likert distributions, means, uncertainty intervals, composite summaries, institution counts, speaker-clarity cross-tabs, and coded-theme frequencies. | [`crispdm_quantitative_metrics.csv`](../ANALYSIS/outputs/tables/crispdm_quantitative_metrics.csv), [`crispdm_composite_summary.csv`](../ANALYSIS/outputs/tables/crispdm_composite_summary.csv), [`crispdm_theme_counts_with_denominators.csv`](../ANALYSIS/outputs/tables/crispdm_theme_counts_with_denominators.csv) |
+| Evaluation | Check internal consistency, compare raw and normalized results, and integrate quantitative patterns with coded participant feedback. | [`crispdm_validation_summary.csv`](../ANALYSIS/outputs/tables/crispdm_validation_summary.csv), [`mixed_methods_evidence_matrix.csv`](../ANALYSIS/outputs/tables/mixed_methods_evidence_matrix.csv) |
+| Deployment and decision handoff | Convert the evidence into bounded design and evaluation cues without claiming causal learning effects. | [`crispdm_decision_prompts.csv`](../ANALYSIS/outputs/tables/crispdm_decision_prompts.csv), [Chapter 3 implications](04-implications.md) |
+
 ## Analytic dataset and quality checks
 
 All 52 rows contained valid, in-range responses for the 15 analyzed rating fields. The pipeline reported zero missing rating cells, zero out-of-range cells, and zero duplicate generated respondent IDs. Two duplicate timestamp values were observed as a diagnostic condition, but timestamps were not used as respondent identifiers or analytic keys. The analysis therefore retained all 52 rows. The validation summary is available in [`crispdm_validation_summary.csv`](../ANALYSIS/outputs/tables/crispdm_validation_summary.csv).

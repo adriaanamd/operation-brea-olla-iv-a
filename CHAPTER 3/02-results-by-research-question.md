@@ -2,7 +2,23 @@
 
 The results are organized around the evaluation objectives: the perceived quality of the session, the respondent and institutional profile, the feedback participants reported in the open-ended prompts, and the way the two evidence streams relate. All quantitative values below were read from the Conda-generated outputs in `ANALYSIS/outputs/`.
 
-## Evaluation of the session experience
+## CRISP-DM 1 — Business understanding
+
+The analysis addressed three decision needs: identify which aspects of the webinar were perceived as strong, identify what participants reported learning or valuing, and identify specific improvements for a subsequent session. The decision prompts were deliberately bounded to immediate participant perceptions and reported feedback; they were not framed as a test of causal learning impact. The handoff prompts are available in [`crispdm_decision_prompts.csv`](../ANALYSIS/outputs/tables/crispdm_decision_prompts.csv).
+
+## CRISP-DM 2 — Data understanding
+
+The analytic grain was one submitted evaluation row. The export contained 52 rows and 24 source fields: 13 primary Likert items, two separate summary ratings, and four open-ended prompts, in addition to administrative and consent fields. The profile and validation outputs are [`crispdm_data_profile.csv`](../ANALYSIS/outputs/tables/crispdm_data_profile.csv) and [`crispdm_validation_summary.csv`](../ANALYSIS/outputs/tables/crispdm_validation_summary.csv). The institution and response-pattern displays below remain descriptive because recorded labels were not harmonized and no verified attendance denominator was available.
+
+## CRISP-DM 3 — Data preparation and normalization
+
+The pipeline parsed the five-point responses into stable analysis fields, generated de-identified row IDs, preserved the raw export, and checked missingness and range validity. Two rows matched the pre-specified scale-direction flag: all 13 primary items were recorded as `1` while both summary ratings were at least `4`. Only those 26 primary-item cells were reverse-normalized with `6 - raw`; the summary ratings were retained as anchors. The field-level audit is [`normalization_audit.csv`](../ANALYSIS/outputs/tables/normalization_audit.csv), and the raw-versus-normalized sensitivity table is [`crispdm_normalization_sensitivity.csv`](../ANALYSIS/outputs/tables/crispdm_normalization_sensitivity.csv).
+
+## CRISP-DM 4 — Descriptive modeling and analysis
+
+In this evaluation, modeling meant descriptive and exploratory analysis rather than prediction. The figures and tables below report normalized Likert distributions, bootstrap intervals for item means, Wilson intervals for agreement proportions, a descriptive respondent-level composite, an ordinal cross-tabulation, and analyst-coded themes.
+
+### Evaluation of the session experience
 
 ![Primary-item means with bootstrap intervals](../ANALYSIS/outputs/figures/likert_item_means.png)
 
@@ -57,7 +73,7 @@ The primary-item composite had a mean of 4.6598 (SD = 0.4390; median = 4.9231), 
 
 *Figure 3.6. Distribution of respondent-level means across the 13 normalized primary items, with the sample mean and median marked.*
 
-## Respondent and institutional profile
+### Respondent and institutional profile
 
 The analysis included 52 available evaluation responses. The institution field was retained as recorded for descriptive reporting. `Gordon College` appeared as the exact recorded value for 37 responses (71.15%). Fifteen other recorded categories appeared once each (1.92% per category), including capitalization and spelling variants of Gordon College, other institutions, one unspecified response, and one `Prefer not to say` response. Because institution labels were not harmonized in the pipeline, these values should not be added to produce an inferred institutional total. The complete output is [`crispdm_institution_summary.csv`](../ANALYSIS/outputs/tables/crispdm_institution_summary.csv).
 
@@ -67,7 +83,7 @@ The dataset contained no missing rating cells and no out-of-range rating cells. 
 
 *Figure 3.7. Exact institution labels as recorded in the export. Capitalization and spelling variants remain separate, so the figure is a data-profile display rather than a harmonized institutional count.*
 
-## Speaker clarity and overall rating
+### Speaker clarity and overall rating
 
 The cross-tabulation below examines speaker clarity against the overall rating. It is descriptive and does not imply that clarity caused the overall rating.
 
@@ -83,7 +99,7 @@ The ordinal association between speaker clarity and overall rating was Spearman 
 
 *Figure 3.8. Counts in the cross-tabulation of speaker-clarity and overall-session-rating responses. The heatmap visualizes association and does not imply causation.*
 
-## Open-ended feedback
+### Open-ended feedback
 
 The qualitative unit was one respondent answer to one open-ended prompt. Multiple codes could be assigned to one answer. The resulting counts are therefore coded assignments and respondent coverage, not mutually exclusive participant categories.
 
@@ -118,6 +134,23 @@ The coding record also marked 99 assignments as `NO_SUBSTANTIVE_RESPONSE`, invol
 
 *Figure 3.11. Raw and normalized primary-item means. The paired points show the descriptive effect of reversing the two flagged respondents' primary Likert entries from 1 to 5; summary anchors were not changed.*
 
-## Integration of the two strands
+## CRISP-DM 5 — Evaluation and mixed-methods integration
+
+The evaluation phase checked whether the prepared data remained valid, whether the normalization decision materially changed the descriptive pattern, and whether the quantitative and qualitative strands supplied complementary evidence. The validation record is [`crispdm_validation_summary.csv`](../ANALYSIS/outputs/tables/crispdm_validation_summary.csv), the sensitivity table is [`crispdm_normalization_sensitivity.csv`](../ANALYSIS/outputs/tables/crispdm_normalization_sensitivity.csv), and the integrated evidence matrix is [`mixed_methods_evidence_matrix.csv`](../ANALYSIS/outputs/tables/mixed_methods_evidence_matrix.csv).
+
+### Integration of the two strands
 
 The two evidence streams pointed in a broadly similar direction. Ratings were high across the 13 primary items, while the comments most often referred to AI use, software development, testing, clarity, demonstrations, and practical relevance. The qualitative material also added information that the rating averages could not show: some respondents wanted more examples, more interaction, more depth, or improved technical quality. The resulting interpretation is therefore positive but not unqualified. Participants generally reported a favorable experience, while the coded feedback identified concrete ways to increase practice and participation. The generated mixed-methods matrix is available in [`mixed_methods_evidence_matrix.csv`](../ANALYSIS/outputs/tables/mixed_methods_evidence_matrix.csv).
+
+## CRISP-DM 6 — Deployment and decision handoff
+
+The deployment phase translated the verified outputs into bounded decision cues for the next webinar or evaluation cycle. These are handoff recommendations, not causal claims about what will improve learning.
+
+| Decision cue | Evidence from this evaluation | Handoff implication |
+| --- | --- | --- |
+| Retain or showcase strengths | Presentation materials: mean 4.7308, 98.08% agreement, 75.00% top-box; organization: mean 4.7115 ([quantitative metrics](../ANALYSIS/outputs/tables/crispdm_quantitative_metrics.csv)). | Preserve the clear structure, explicit objectives, and organized materials. |
+| Add practice and participation | More examples: 7 assignments/7 respondents; more interaction: 6 assignments/5 respondents; engagement had the lowest agreement rate at 92.31% ([theme counts](../ANALYSIS/outputs/tables/crispdm_theme_counts_with_denominators.csv); [quantitative metrics](../ANALYSIS/outputs/tables/crispdm_quantitative_metrics.csv)). | Add guided examples, interactive debugging, or test-writing practice, then evaluate the next session separately. |
+| Protect measurement quality | Two scale-direction flags produced 26 documented primary-item corrections ([normalization audit](../ANALYSIS/outputs/tables/normalization_audit.csv)). | Keep visual scale-direction cues and preserve the normalization audit with future reports. |
+| Preserve mixed-methods interpretation | The evidence matrix separates numeric perception measures from coded reported feedback ([mixed-methods matrix](../ANALYSIS/outputs/tables/mixed_methods_evidence_matrix.csv)). | Continue reporting ratings, respondent coverage, and coded assignments together without treating either as objective learning evidence. |
+
+The formal decision-prompt output is [`crispdm_decision_prompts.csv`](../ANALYSIS/outputs/tables/crispdm_decision_prompts.csv); the broader implications are developed in [`04-implications.md`](04-implications.md).
