@@ -6,7 +6,7 @@ This project produces a narrative report written in a research-like manner. The 
 
 These instructions apply to every chapter file. Preserve substantive draft ideas where possible, but reorganize the text and correct the documentation so that these rules are met.
 
-For every manuscript-writing, literature-review, revision, citation, or integrity task, activate `$ars-codex:academic-research-suite` and select its narrowest applicable workflow. Always activate `$humanizer` alongside ARS for manuscript prose and apply it after evidence and citation checks. For Chapter 3 computational work and Chapter 4 quantitative-result interpretation, also activate `$data-analyst` and apply its data-quality, metric-definition, uncertainty, reproducibility, and limitation checks. Pure Chapter 1 or 2 prose work does not require Data Analyst unless it includes dataset-based claims.
+For every manuscript-writing, literature-review, revision, citation, or integrity task, activate `$ars-codex:academic-research-suite` and select its narrowest applicable workflow. Always activate `$humanizer` alongside ARS for manuscript prose and apply it after evidence and citation checks. For Chapter 2 analysis methods and Chapter 3 quantitative results/discussion, also activate `$data-analyst` and apply its data-quality, metric-definition, uncertainty, reproducibility, and limitation checks. Pure Chapter 1 prose work does not require Data Analyst unless it includes dataset-based claims.
 
 ## 2. Required organization
 
@@ -54,8 +54,8 @@ The names above are canonical. If the approved proposal requires another part, a
 Although this is a narrative report, its reasoning must follow IMRaD:
 
 - **Introduction:** establish context, problem, objectives, significance, scope, and key terms. Chapter 1 must move from broad context to the specific research problem.
-- **Methods:** explain exactly how evidence was gathered, processed, and analyzed. Chapter 3 must be specific enough for another researcher to reproduce the work.
-- **Results:** report what the data show before making broad claims. Chapter 4 must present findings in the same order as the research questions or objectives.
+- **Methods:** explain exactly how evidence was gathered, processed, and analyzed. Chapter 2 must be specific enough for another researcher to reproduce the work.
+- **Results:** report what the data show before making broad claims. Chapter 3 must present findings in the same order as the research questions or objectives.
 - **Discussion:** interpret findings in relation to the literature, framework, context, and limitations. Do not introduce uncited external claims or new data in the discussion.
 
 Use a clear narrative voice, but do not replace evidence with anecdotes, unsupported opinion, promotional language, or fictional details. Separate observation, interpretation, and implication. Use cautious claims such as “the findings suggest” when the design does not support causal language.
@@ -66,7 +66,7 @@ Use a clear narrative voice, but do not replace evidence with anecdotes, unsuppo
 2. Keep terminology, population labels, dates, variables, and research-question numbering consistent across all files.
 3. Do not duplicate whole paragraphs across chapters. Cross-reference the relevant file instead.
 4. Use Markdown headings, tables, and lists consistently. Store figures and tables with descriptive captions and stable filenames.
-5. Every numeric result reported in Chapter 4 must be traceable to a Chapter 3 Python analysis and stored output in `ANALYSIS/`; narrative observations and interpretations must be traceable to the fact ledger or a cited source.
+5. Every numeric result reported in Chapter 3 must be traceable to a Chapter 2 Python analysis and stored output in `ANALYSIS/`; narrative observations and interpretations must be traceable to the fact ledger or a cited source.
 6. State limitations honestly. Never conceal missing data, contradictory findings, null findings, or methodological constraints.
 7. Do not use placeholder citations, invented quotations, fabricated statistics, or references that cannot be verified.
 
@@ -75,7 +75,7 @@ Use a clear narrative voice, but do not replace evidence with anecdotes, unsuppo
 Citation requirements are section-specific and are minimums, not targets to be met by padding:
 
 - **Background of the Study:** at least 30 distinct, relevant, verifiable sources cited in the text.
-- **Review of Related Literature:** at least 70 distinct, relevant, verifiable sources cited in the text. This requirement applies to the Literature Review section alone; citations from other chapters do not count toward it.
+- Chapter 2 is the methodology chapter under the approved IMRADC structure; it does not carry a 70-source literature-review minimum.
 - Other sections must cite sources whenever they make a claim that depends on prior research, a standard, a policy, a dataset, or an external fact.
 
 For every in-text citation:
@@ -89,15 +89,15 @@ For every in-text citation:
 7. Do not fabricate or “complete” missing bibliographic details. Mark unresolved records for correction before submission.
 8. All citations used in the manuscript must be from 2022 or later. Do not use pre-2022 works as cited sources; replace them with current sources where support is needed.
 
-Before completion, audit citation coverage and reference integrity. The audit must report the number of distinct sources in the Background and Literature Review files, uncited references, citations missing from `REFERENCES.md`, duplicate records, and records with missing identifiers or stable URLs. A section passes only when the required counts and integrity checks pass.
+Before completion, audit citation coverage and reference integrity. The audit must report the number of distinct sources in the Background file, uncited references, citations missing from `REFERENCES.md`, duplicate records, and records with missing identifiers or stable URLs. Methodology citations must still resolve accurately.
 
 ## 6. Chapter-specific analysis policy
 
-Python is mandatory for Chapter 3 computational work: data preparation, de-identification support, response coding, descriptive statistics, statistical tests, modeling, chart generation, and any derived numeric output. Store the code and outputs under `ANALYSIS/`.
+Python is mandatory for Chapter 2 computational methods: data preparation, de-identification support, response coding, descriptive statistics, chart generation, and any derived numeric output reported in Chapter 3. Store the code and outputs under `ANALYSIS/`.
 
-Chapters 1 and 2 are source-reading, citation-management, and prose-synthesis work; they do not require Python analysis. Chapter 4 consumes and interprets the verified outputs from Chapter 3. It must not introduce undocumented spreadsheet calculations or manual statistics. If a Chapter 1, 2, or 4 task needs a new derived number, create or update the Chapter 3 Python artifact first.
+Chapter 1 is source-based. Chapter 2 documents the Python analysis and Chapter 3 consumes and interprets its verified outputs. Chapter 3 must not introduce undocumented spreadsheet calculations or manual statistics. If any chapter needs a new derived number, create or update the Chapter 2 Python artifact first.
 
-Required Chapter 3 practices:
+Required Chapter 2 analysis practices:
 
 - Keep scripts, notebooks, configuration, data dictionaries, logs, and generated outputs in clearly named `ANALYSIS/` subfolders.
 - Prefer rerunnable `.py` scripts for the final pipeline. Notebooks may document exploration, but final reported results must be reproducible from a script or documented notebook run.
@@ -113,7 +113,7 @@ For each part:
 
 1. Confirm that the file is in the correct chapter folder and has one clear purpose.
 2. Check claims against the source and add or correct the corresponding `REFERENCES.md` record.
-3. For Chapter 3 or any numeric result consumed by Chapter 4, run the relevant Python analysis and confirm that reported values match the generated outputs. For Chapters 1 and 2, run source, citation, and reference checks instead.
+3. For Chapter 2 analysis or any numeric result reported in Chapter 3, run the relevant Python analysis and confirm that reported values match the generated outputs. For Chapter 1, run source, citation, and reference checks.
 4. Check consistency with the research questions, frameworks, methods, and other chapter files.
 5. Run the citation/reference audit and inspect Markdown links, tables, figures, and filenames.
 

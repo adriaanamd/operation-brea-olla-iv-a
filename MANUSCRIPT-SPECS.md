@@ -8,7 +8,7 @@
 
 ## 0. Required skill routing
 
-Every manuscript-writing, literature, citation, revision, or integrity task must use `$ars-codex:academic-research-suite` and one of its appropriate workflows. Chapter 3 computational analysis and Chapter 4 quantitative-result interpretation must also use `$data-analyst` practices for data inventory, quality validation, metric definitions, denominators, uncertainty, reproducibility, and limitations. Chapters 1 and 2 remain primarily source-based writing and synthesis unless a task explicitly includes dataset analysis.
+Every manuscript-writing, literature, citation, revision, or integrity task must use `$ars-codex:academic-research-suite` and one of its appropriate workflows. Chapter 2 analysis methods and Chapter 3 quantitative results/discussion must also use `$data-analyst` practices for data inventory, quality validation, metric definitions, denominators, uncertainty, reproducibility, and limitations. Chapter 1 remains primarily source-based writing and synthesis.
 
 ## 1. Research-like narrative and IMRaD logic
 
@@ -84,29 +84,17 @@ If the approved activity requires an additional part, add it as a separately num
 - `05-scope-and-delimitations.md`: define the webinar, setting, participants, evidence, time frame, exclusions, and boundaries of interpretation.
 - `06-definition-of-terms.md`: define TDD, SDET, Red–Green–Refactor, Vitest, CI, AI coding agent, evaluation instrument, and other study-specific terms.
 
-### Chapter 2 — Review of Related Literature
+### Chapter 2 — Research Methodology
 
-- `01-review-of-related-literature.md`: synthesize concepts, theories, patterns, and disagreements concerning TDD, software-testing education, AI-assisted coding, and webinar or training evaluation. **Minimum: 70 distinct, relevant, verifiable sources cited in this file alone.**
-- `02-review-of-related-studies.md`: compare relevant empirical studies, contexts, methods, findings, and limitations.
-- `03-theoretical-framework.md`: identify and justify the instructional or evaluation framework used by the study.
-- `04-conceptual-framework.md`: describe the proposed model: inputs (topic, organizers, materials, platform) → process (planning, approval, delivery, demonstration, evaluation) → outputs (conducted webinar, documented feedback, and artifacts). Do not present it as a validated causal model.
-- `05-synthesis-and-research-gap.md`: synthesize the evidence, state the precise gap, and explain how this report responds to it.
+- `01-research-design.md`: describe the convergent mixed-methods, nonexperimental post-activity evaluation design.
+- `02-research-locale-and-context.md`: describe the online delivery context and mark unavailable details as unresolved.
+- `03-participants-and-sampling.md`: describe the 52 available evaluation responses, sampling basis, and unresolved attendance denominator.
+- `04-research-instruments.md`: describe the 13 Likert items, separate overall/satisfaction items, consent fields, and open-ended prompts.
+- `05-data-gathering-procedure.md`: document the timestamped evaluation export and evidence-handling procedure.
+- `06-data-analysis.md`: document Python validation, two-row scale normalization, descriptive statistics, thematic coding, and mixed-methods integration.
+- `07-ethical-considerations.md`: document consent, privacy, confidentiality, de-identification, and unresolved approval details.
 
-The 70-source minimum applies to `01-review-of-related-literature.md` by itself, not to the chapter by simple accumulation. Every source cited in Chapter 2 must also appear in `REFERENCES.md`.
-
-### Chapter 3 — Research Methodology
-
-- `01-research-design.md`: describe the descriptive, nonexperimental post-activity evaluation design if supported by the evidence.
-- `02-research-locale-and-context.md`: describe the online platform, hosting institution, and delivery setting; mark unverified details.
-- `03-participants-and-sampling.md`: describe the population, eligibility, sample, sampling method, recruitment, and available attendance evidence.
-- `04-research-instruments.md`: describe registration or attendance records, evaluation forms, structured and open-ended items, presentation materials, and technical evidence. Do not claim psychometric validation without proof.
-- `05-data-gathering-procedure.md`: document approvals, registration, event delivery, post-webinar evaluation, screenshots, and links with dates and responsible parties when verified.
-- `06-data-analysis.md`: document the analysis plan and link every reported analysis to a Python artifact in `ANALYSIS/`.
-- `07-ethical-considerations.md`: document consent, privacy, confidentiality, de-identification, data handling, risks, and approvals.
-
-Any technical demonstration evaluation must describe actual presentation flow, TDD steps, test execution, repository artifacts, and evidence limitations. Do not automatically import thesis-template sections such as “Algorithm Process Evaluation” when they do not fit a webinar.
-
-### Chapter 4 — Presentation, Analysis, Interpretation, and Implications
+### Chapter 3 — Results and Discussion
 
 - `01-results-overview.md`: describe the analyzed dataset or evidence corpus and the order of presentation.
 - `02-results-by-research-question.md`: present implementation evidence, attendance or respondent characteristics, evaluation distributions, descriptive statistics, open-ended themes, technical evidence, and objective-to-evidence mapping as supported by the data.
@@ -123,7 +111,6 @@ If a conclusion or recommendation section is required by the approved report out
 | Section | Minimum distinct, verifiable sources | Counting rule |
 | --- | ---: | --- |
 | Chapter 1 — Background of the Study | 30 | Count distinct works cited in `CHAPTER_1/01-background-of-the-study.md` |
-| Chapter 2 — Review of Related Literature | 70 | Count distinct works cited in `CHAPTER_2/01-review-of-related-literature.md` alone |
 
 Repeated mentions do not increase a section's count. A source may support more than one section, but it is counted only once per section and must have one consistent record in `REFERENCES.md`.
 
@@ -134,17 +121,17 @@ Before sign-off, the citation audit must verify:
 1. Every in-text citation resolves to a record in `REFERENCES.md`.
 2. Every reference record is cited at least once.
 3. The Background file has at least 30 distinct sources.
-4. The Literature Review file has at least 70 distinct sources.
+4. Chapter 2 methodology citations are complete and accurate where used.
 5. Duplicate or conflicting records are resolved.
 6. Bibliographic details, DOI links, and stable URLs are valid or explicitly marked for manual review.
 
 ## 5. Chapter-specific Python analysis specification
 
-Python is mandatory for Chapter 3 computational work: data preparation, de-identification support, response coding, descriptive statistics, statistical tests, modeling, chart generation, and any derived numeric output. Store the code and outputs under `ANALYSIS/`.
+Python is mandatory for Chapter 2 computational methods and all derived numeric output reported in Chapter 3. Store the code and outputs under `ANALYSIS/`.
 
-Chapters 1 and 2 use source reading, citation management, and prose synthesis; they do not require Python analysis. Chapter 4 consumes and interprets verified Chapter 3 outputs. It must not introduce undocumented spreadsheet calculations or manual statistics. If a Chapter 1, 2, or 4 task needs a new derived number, route that computation through a Python artifact in `ANALYSIS/` before reporting it.
+Chapter 1 is source-based. Chapter 2 documents the Python analysis and Chapter 3 consumes and interprets verified outputs. Chapter 3 must not introduce undocumented spreadsheet calculations or manual statistics. If any chapter needs a new derived number, route that computation through a Python artifact in `ANALYSIS/` before reporting it.
 
-Required Chapter 3 practices:
+Required Chapter 2 analysis practices:
 
 - Keep rerunnable `.py` scripts, notebooks, configuration, data dictionaries, logs, and generated outputs in clearly named `ANALYSIS/` subfolders.
 - Prefer a rerunnable Python script for the final pipeline. Notebooks may document exploration, but final reported results must be reproducible from a script or documented notebook run.
@@ -172,11 +159,11 @@ Use `[TO VERIFY: ...]` for missing details. Remove or anonymize participant-iden
 
 The manuscript is ready for review only when:
 
-1. Chapters 1–4 use separate part files as specified or as explicitly documented additions.
+1. Chapters 1–3 use separate part files as specified or as explicitly documented additions.
 2. The prose follows IMRaD logic while retaining an appropriate narrative voice.
 3. The Background of the Study contains at least 30 distinct, verifiable citations.
-4. The Review of Related Literature contains at least 70 distinct, verifiable citations by itself.
+4. Chapter 2 methodology citations are complete and verifiable where used.
 5. Every citation is represented accurately in `REFERENCES.md`.
-6. Every Chapter 3 computational result is reproducible using Python artifacts in `ANALYSIS/`, and Chapter 4 numeric claims match those outputs.
+6. Every Chapter 3 computational result is reproducible using Python artifacts in `ANALYSIS/`.
 7. Results, tables, figures, and claims are internally consistent across chapter files.
 8. Limitations, ethical safeguards, missingness, and uncertainty are reported honestly.
