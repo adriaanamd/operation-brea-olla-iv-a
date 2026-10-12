@@ -37,6 +37,7 @@ CHAPTER_1/
   04-significance-of-the-study.md
   05-scope-and-delimitations.md
   06-definition-of-terms.md
+  07-review-of-related-literature.md
 CHAPTER_2/
   01-review-of-related-literature.md
   02-review-of-related-studies.md
@@ -83,6 +84,7 @@ If the approved activity requires an additional part, add it as a separately num
 - `04-significance-of-the-study.md`: explain the evidence-based value for students, aspiring SDETs, faculty, organizers, and future training activities.
 - `05-scope-and-delimitations.md`: define the webinar, setting, participants, evidence, time frame, exclusions, and boundaries of interpretation.
 - `06-definition-of-terms.md`: define TDD, SDET, Red–Green–Refactor, Vitest, CI, AI coding agent, evaluation instrument, and other study-specific terms.
+- `07-review-of-related-literature.md`: synthesize current literature on software quality and testing, TDD, AI-assisted software development, novice computing education, and responsible AI use. Keep the synthesis distinct from the event-specific background and from Chapter 2 methodology.
 
 ### Chapter 2 — Research Methodology
 

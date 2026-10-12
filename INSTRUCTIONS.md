@@ -22,6 +22,7 @@ CHAPTER_1/
   04-significance-of-the-study.md
   05-scope-and-delimitations.md
   06-definition-of-terms.md
+  07-review-of-related-literature.md
 
 CHAPTER_2/
   01-review-of-related-literature.md

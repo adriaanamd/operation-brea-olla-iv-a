@@ -74,9 +74,9 @@ Do not silently convert `USER-REPORTED`, `INFERRED`, or `UNRESOLVED` material in
 
 Work on one chapter part file at a time. Keep each part separate inside its chapter folder.
 
-#### Chapter 1 — Introduction
+#### Chapter 1 — Introduction and literature review
 
-Write the background, objectives/OOTS, problem, significance, scope, and terms as evidence-based narrative. Use scholarly and authoritative sources for general claims. Do not perform computational analysis here. The Background file must reach at least 30 distinct verified sources.
+Write the background, objectives/OOTS, problem, significance, scope, terms, and separate literature review as evidence-based narrative. Use scholarly and authoritative sources for general claims. Do not perform computational analysis here. The Background file must reach at least 30 distinct verified sources. The literature-review file must synthesize the existing source ledger and state the bounded research gap without inventing coverage.
 
 #### Chapter 2 — Methodology
 
