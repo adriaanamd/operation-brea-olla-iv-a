@@ -1,0 +1,10 @@
+check,value,definition
+respondent rows,52,One row per submitted response
+raw columns excluding generated respondent_id,24,Fields in the supplied CSV
+primary Likert items,13,Normalized 1-5 experience statements
+summary rating items,2,"Overall rating and satisfaction, retained separately"
+open-ended prompts,4,Qualitative response fields
+missing rating cells,0,Missing values in the 15 rating fields
+out-of-range rating cells,0,Values outside the 1-5 response range
+duplicate generated respondent IDs,0,Uniqueness check for de-identified row IDs
+duplicate timestamps,2,Diagnostic only; timestamp is not used as an identifier

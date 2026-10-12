@@ -1,0 +1,11 @@
+[
+  {
+    "rows":52,
+    "raw_columns":24,
+    "missing_analysis_columns":[
+
+    ],
+    "invalid_rating_cells":0,
+    "out_of_range_cells":0
+  }
+]

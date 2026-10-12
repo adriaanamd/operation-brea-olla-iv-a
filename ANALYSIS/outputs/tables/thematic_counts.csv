@@ -1,0 +1,14 @@
+code_id,label,n_assignments,n_respondents
+NO_SUBSTANTIVE_RESPONSE,No substantive response,99,47
+LEARNING_AI_USE,AI use,36,25
+LEARNING_SOFTWARE_DEVELOPMENT,Software development,22,21
+LEARNING_TDD_TESTING,TDD or software testing,21,17
+VALUED_EXPLANATION,Explanation and clarity,17,17
+VALUED_DEMONSTRATION,Demonstration,11,11
+VALUED_PRACTICALITY,Practical relevance,11,9
+OTHER_RELEVANT_FEEDBACK,Other relevant feedback,9,7
+IMPROVEMENT_MORE_EXAMPLES,More examples,7,7
+IMPROVEMENT_MORE_INTERACTION,More interaction,6,5
+VALUED_SPEAKER,Speaker,5,5
+IMPROVEMENT_MORE_DEPTH,More depth,4,4
+IMPROVEMENT_TECHNICAL_QUALITY,Technical quality,2,2

@@ -1,0 +1,14 @@
+item_key,item_label,count_1,count_2,count_3,count_4,count_5,pct_1,pct_2,pct_3,pct_4,pct_5
+item_01,Session objectives were clearly presented,0,0,1,14,37,0.0,0.0,1.92,26.92,71.15
+item_02,Topics were relevant and informative,0,0,1,15,36,0.0,0.0,1.92,28.85,69.23
+item_03,Content was easy to understand,0,0,1,17,34,0.0,0.0,1.92,32.69,65.38
+item_04,Speakers explained the topics clearly,0,0,2,19,31,0.0,0.0,3.85,36.54,59.62
+item_05,Presentation materials were clear and organized,0,0,1,12,39,0.0,0.0,1.92,23.08,75.0
+item_06,Examples and discussions supported understanding,0,0,2,15,35,0.0,0.0,3.85,28.85,67.31
+item_07,Session was engaging and interactive,0,0,4,12,36,0.0,0.0,7.69,23.08,69.23
+item_08,Activities reinforced the topics,0,0,2,15,35,0.0,0.0,3.85,28.85,67.31
+item_09,Knowledge was useful for studies or everyday life,0,0,2,15,35,0.0,0.0,3.85,28.85,67.31
+item_10,Session encouraged critical thinking,0,0,2,13,37,0.0,0.0,3.85,25.0,71.15
+item_11,Session was well-organized,0,0,1,13,38,0.0,0.0,1.92,25.0,73.08
+item_12,Technical aspects were satisfactory,0,0,1,14,37,0.0,0.0,1.92,26.92,71.15
+item_13,Session met expectations,0,0,1,14,37,0.0,0.0,1.92,26.92,71.15

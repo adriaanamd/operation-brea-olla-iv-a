@@ -1,0 +1,14 @@
+item_order,item_key,item_label,n,mean,median,sd,min,max,q1,q3,agree_n,agree_pct
+1,item_01,Session objectives were clearly presented,52,4.6923,5.0,0.5064,3,5,4.0,5.0,51,98.08
+2,item_02,Topics were relevant and informative,52,4.6731,5.0,0.5134,3,5,4.0,5.0,51,98.08
+3,item_03,Content was easy to understand,52,4.6346,5.0,0.525,3,5,4.0,5.0,51,98.08
+4,item_04,Speakers explained the topics clearly,52,4.5577,5.0,0.5744,3,5,4.0,5.0,50,96.15
+5,item_05,Presentation materials were clear and organized,52,4.7308,5.0,0.4897,3,5,4.75,5.0,51,98.08
+6,item_06,Examples and discussions supported understanding,52,4.6346,5.0,0.5611,3,5,4.0,5.0,50,96.15
+7,item_07,Session was engaging and interactive,52,4.6154,5.0,0.631,3,5,4.0,5.0,48,92.31
+8,item_08,Activities reinforced the topics,52,4.6346,5.0,0.5611,3,5,4.0,5.0,50,96.15
+9,item_09,Knowledge was useful for studies or everyday life,52,4.6346,5.0,0.5611,3,5,4.0,5.0,50,96.15
+10,item_10,Session encouraged critical thinking,52,4.6731,5.0,0.5503,3,5,4.0,5.0,50,96.15
+11,item_11,Session was well-organized,52,4.7115,5.0,0.4985,3,5,4.0,5.0,51,98.08
+12,item_12,Technical aspects were satisfactory,52,4.6923,5.0,0.5064,3,5,4.0,5.0,51,98.08
+13,item_13,Session met expectations,52,4.6923,5.0,0.5064,3,5,4.0,5.0,51,98.08

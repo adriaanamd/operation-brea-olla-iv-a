@@ -1,0 +1,23 @@
+{
+  "sample_n": 52,
+  "flagged_scale_direction_rows": 2,
+  "strongest_primary_item": {
+    "item_key": "item_05",
+    "label": "Presentation materials were clear and organized",
+    "mean": 4.7308,
+    "agree_pct": 98.08
+  },
+  "lowest_primary_item": {
+    "item_key": "item_04",
+    "label": "Speakers explained the topics clearly",
+    "mean": 4.5577,
+    "agree_pct": 96.15
+  },
+  "qualitative_priority_code": {
+    "code_id": "LEARNING_AI_USE",
+    "label": "AI use",
+    "assignments": 36,
+    "respondents": 25
+  },
+  "interpretation_boundary": "Descriptive post-event perceptions and coded reported feedback; not objective learning, causal impact, or population estimates."
+}

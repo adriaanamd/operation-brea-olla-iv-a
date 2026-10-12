@@ -37,7 +37,7 @@ The primary-item composite had a mean of 4.6598 (SD = 0.4390; median = 4.9231), 
 
 The analysis included 52 available evaluation responses. The institution field was retained as recorded for descriptive reporting. `Gordon College` appeared as the exact recorded value for 37 responses (71.15%). Fifteen other recorded categories appeared once each (1.92% per category), including capitalization and spelling variants of Gordon College, other institutions, one unspecified response, and one `Prefer not to say` response. Because institution labels were not harmonized in the pipeline, these values should not be added to produce an inferred institutional total. The complete output is [`crispdm_institution_summary.csv`](../ANALYSIS/outputs/tables/crispdm_institution_summary.csv).
 
-The dataset contained no missing rating cells and no out-of-range rating cells. Two duplicate timestamp values were retained because timestamps were not used as respondent identifiers. The data-quality and manifest records are available in [`crispdm_validation_summary.csv`](../ANALYSIS/outputs/tables/crispdm_validation_summary.csv) and [`analysis_manifest.json`](../ANALYSIS/outputs/analysis_manifest.json).
+The dataset contained no missing rating cells and no out-of-range rating cells. Two duplicate timestamp values were retained because timestamps were not used as respondent identifiers. The data-quality record is available in [`crispdm_validation_summary.csv`](../ANALYSIS/outputs/tables/crispdm_validation_summary.csv).
 
 ## Speaker clarity and overall rating
 
