@@ -52,6 +52,8 @@ The 13 primary statements were summarized on the normalized 1-5 Likert scale. Th
 
 The item means ranged from 4.5577 to 4.7308. Presentation materials received the highest mean and top-box rate, while speaker clarity received the lowest mean and top-box rate. The engagement item had the lowest agreement rate at 92.31%, although it still had a high mean of 4.6154. These rankings identify relative differences within this respondent set; they do not establish meaningful population differences or a causal hierarchy among session components. The source table is [`crispdm_quantitative_metrics.csv`](../ANALYSIS/outputs/tables/crispdm_quantitative_metrics.csv), with the response distribution in [`likert_distributions.csv`](../ANALYSIS/outputs/tables/likert_distributions.csv).
 
+The CRISP-DM metric output also shows why the ranking should be interpreted cautiously. The bootstrap interval for presentation materials was 4.5962-4.8654, while the interval for speaker clarity was 4.4038-4.7115; the intervals overlap. Thus, the output supports a descriptive ordering of dimensions, not a claim that materials performed significantly better than clarity. The Wilson interval for engagement agreement was 81.83%-96.97%, which retains uncertainty around the observed 92.31% proportion in this available respondent set.
+
 The separate summary ratings were also favorable:
 
 | Summary item | Mean | SD | Agreement (4 or 5) | Top-box (5) |
@@ -121,6 +123,8 @@ The qualitative unit was one respondent answer to one open-ended prompt. Multipl
 AI use was the most frequent substantive code, followed by broader software-development comments and TDD or testing comments. Explanation and clarity was the most frequent valued-delivery code. Requests for more examples and more interaction were the most frequent improvement codes. Technical-quality comments were less frequent, with two assignments involving two respondents. The coding output with respondent denominators is [`crispdm_theme_counts_with_denominators.csv`](../ANALYSIS/outputs/tables/crispdm_theme_counts_with_denominators.csv).
 
 The coding record also marked 99 assignments as `NO_SUBSTANTIVE_RESPONSE`, involving 47 respondents across the four prompts. These counts are not additional findings about satisfaction; they document the amount of non-substantive material in the qualitative stream. By prompt, the no-substantive code appeared 9 times for learning-value responses, 10 times for liked-most responses, 38 times for improvement responses, and 42 times for additional comments. The prompt-by-code table is [`crispdm_theme_by_prompt.csv`](../ANALYSIS/outputs/tables/crispdm_theme_by_prompt.csv).
+
+The prompt-level CRISP-DM output changes the meaning of the aggregate theme ranking. Learning-value responses were concentrated in AI use (22 assignments), software development (21), and TDD/testing (14). Liked-most responses emphasized explanation and clarity (17), AI use (14), and demonstrations (11). Improvement responses emphasized more examples (7), more interaction (5), and more depth (3). Additional comments contained 42 no-substantive assignments, so that prompt was less informative for explaining the session than the other three. These are coded assignments rather than mutually exclusive respondent categories; the complete prompt matrix is [`crispdm_theme_by_prompt.csv`](../ANALYSIS/outputs/tables/crispdm_theme_by_prompt.csv).
 
 ![Substantive theme assignments](../ANALYSIS/outputs/figures/theme_assignments.png)
 
