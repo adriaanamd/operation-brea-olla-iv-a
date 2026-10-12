@@ -1,10 +1,10 @@
 # Webinar evaluation analysis
 
-This directory contains the reproducible analysis for the IMRADC manuscript. The raw CSV in `data/` is read-only. The intended execution environment is Google Colab, not the local Windows Python installation. Open [`src/main.ipynb`](src/main.ipynb) in Colab and run the cells in order. The notebook verifies that the standard analysis packages are available in the remote runtime; it does not install packages into the local machine.
+This directory contains the reproducible analysis for the IMRADC manuscript. The raw CSV in `data/` is read-only. The preferred execution environment is the local Conda/Jupyter kernel selected in VS Code. Open [`src/main.ipynb`](src/main.ipynb) from this repository and run the cells in order; generated tables and figures will be written directly to `ANALYSIS/outputs/` and can then be committed with Git. The notebook verifies that the standard packages are available in the active environment and does not install packages into the local machine.
 
-Important: opening the notebook in VS Code does not make the local workspace visible to a Colab kernel. The editor is local, but execution happens on a remote Jupyter server. A Windows path such as `C:\\Users\\...` will therefore not work.
+If a Colab kernel is selected instead, execution occurs on a remote Jupyter server and its `/content` files are separate from this local Git working tree. A Windows path such as `C:\\Users\\...` is valid only with the local Conda/Jupyter kernel. The setup cell detects the local project root from the working directory first; `LOCAL_PROJECT_ROOT` can be set manually if VS Code opened the notebook from another directory.
 
-The setup cell avoids Google Drive. It clones the committed public repository into the temporary Colab runtime using the configured HTTPS URL and `master` branch. Push the current commit before running the notebook. If the repository is private or the commit has not been pushed, upload a ZIP containing `ANALYSIS/src` and the desensitized CSV when prompted. Never put a GitHub token or password in the notebook.
+Colab remains a remote fallback. When no local project root is found, the setup cell can clone the public repository into temporary `/content` or accept a ZIP upload. Those remote outputs must be downloaded or otherwise transferred before they can be committed locally. No Google Drive mount is required, and no GitHub token or password belongs in the notebook.
 
 The notebook expects the desensitized CSV at:
 
