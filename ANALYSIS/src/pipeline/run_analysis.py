@@ -21,6 +21,12 @@ from .config import (
 )
 from .io import build_rating_frame, build_text_frame, load_evaluation_csv
 from .quality import flag_scale_direction_rows, normalize_rating_frame, validate_frame
+from .reporting import (
+    add_derived_plot_inputs,
+    build_extended_tables,
+    write_extended_figures,
+    write_extended_tables,
+)
 from .summary import summarize_likert, summarize_single_items
 
 
@@ -164,9 +170,21 @@ def run_analysis(input_path: Path = DEFAULT_INPUT, output_dir: Path = DEFAULT_OU
     single_summary.to_csv(paths["tables"] / "overall_satisfaction_summary.csv", index=False)
     pd.DataFrame([quality]).to_json(paths["tables"] / "data_quality_summary.json", orient="records", indent=2)
     pd.DataFrame([quality]).to_csv(paths["tables"] / "data_quality_summary.csv", index=False)
-    theme_counts, _ = _theme_outputs(output_dir)
+    theme_counts, theme_decisions = _theme_outputs(output_dir)
     _write_evidence_matrix(output_dir, item_summary, single_summary, theme_counts)
-    _write_figures(item_summary, distributions, paths["figures"])
+    extended_tables = build_extended_tables(
+        raw,
+        ratings,
+        normalized,
+        item_summary,
+        distributions,
+        single_summary,
+        theme_counts,
+        theme_decisions,
+    )
+    write_extended_tables(paths["tables"], extended_tables)
+    extended_tables = add_derived_plot_inputs(extended_tables, normalized, distributions)
+    write_extended_figures(extended_tables, paths["figures"])
 
     manifest = {
         "python": platform.python_version(),

@@ -4,6 +4,18 @@ The results are organized around the evaluation objectives: the perceived qualit
 
 ## Evaluation of the session experience
 
+![Primary-item means with bootstrap intervals](../ANALYSIS/outputs/figures/likert_item_means.png)
+
+*Figure 3.1. Normalized means for the 13 primary Likert items with deterministic bootstrap 95% intervals. The display supports within-sample comparison and does not represent population-level inference.*
+
+![Primary-item means with interquartile ranges](../ANALYSIS/outputs/figures/likert_item_means_iqr.png)
+
+*Figure 3.2. Primary-item means with interquartile ranges, showing the concentration of responses on the upper end of the five-point scale.*
+
+![Distribution of primary Likert responses](../ANALYSIS/outputs/figures/likert_distribution.png)
+
+*Figure 3.3. Percentage distribution of ratings 1 through 5 for each primary item after the documented respondent-level normalization.*
+
 The 13 primary statements were summarized on the normalized 1-5 Likert scale. The agreement rate uses the pre-specified threshold of 4 or 5. The top-box rate is the percentage selecting 5. The full metric file also contains bootstrap 95% intervals for item means and Wilson 95% intervals for agreement proportions.
 
 | Primary item | Mean | SD | Agreement (4 or 5) | Top-box (5) |
@@ -33,11 +45,27 @@ The separate summary ratings were also favorable:
 
 The primary-item composite had a mean of 4.6598 (SD = 0.4390; median = 4.9231), and 94.23% of respondents had a composite score of at least 4. This composite is a descriptive summary of the 13 items, not a validated psychometric scale. The composite output is [`crispdm_composite_summary.csv`](../ANALYSIS/outputs/tables/crispdm_composite_summary.csv).
 
+![Agreement compared with top-box responses](../ANALYSIS/outputs/figures/agreement_topbox_scatter.png)
+
+*Figure 3.4. Agreement percentages (ratings 4-5) compared with top-box percentages (rating 5) for the primary items. Labels identify item numbers and do not imply ranking significance.*
+
+![Summary rating distributions](../ANALYSIS/outputs/figures/summary_rating_distribution.png)
+
+*Figure 3.5. Response distributions for the overall session rating and overall satisfaction items.*
+
+![Respondent-level composite distribution](../ANALYSIS/outputs/figures/composite_distribution.png)
+
+*Figure 3.6. Distribution of respondent-level means across the 13 normalized primary items, with the sample mean and median marked.*
+
 ## Respondent and institutional profile
 
 The analysis included 52 available evaluation responses. The institution field was retained as recorded for descriptive reporting. `Gordon College` appeared as the exact recorded value for 37 responses (71.15%). Fifteen other recorded categories appeared once each (1.92% per category), including capitalization and spelling variants of Gordon College, other institutions, one unspecified response, and one `Prefer not to say` response. Because institution labels were not harmonized in the pipeline, these values should not be added to produce an inferred institutional total. The complete output is [`crispdm_institution_summary.csv`](../ANALYSIS/outputs/tables/crispdm_institution_summary.csv).
 
 The dataset contained no missing rating cells and no out-of-range rating cells. Two duplicate timestamp values were retained because timestamps were not used as respondent identifiers. The data-quality record is available in [`crispdm_validation_summary.csv`](../ANALYSIS/outputs/tables/crispdm_validation_summary.csv).
+
+![Institution profile](../ANALYSIS/outputs/figures/institution_profile.png)
+
+*Figure 3.7. Exact institution labels as recorded in the export. Capitalization and spelling variants remain separate, so the figure is a data-profile display rather than a harmonized institutional count.*
 
 ## Speaker clarity and overall rating
 
@@ -50,6 +78,10 @@ The cross-tabulation below examines speaker clarity against the overall rating. 
 | 5 - Strongly agree | 31 | 4.8387 | 26/31 | 83.87% |
 
 The ordinal association between speaker clarity and overall rating was Spearman rho = **0.5459** across 52 complete cases. This positive association is compatible with the idea that perceptions of delivery and overall evaluation moved together in this dataset, but the post-event design cannot distinguish association from confounding or response-style effects. The underlying tables are [`crispdm_speaker_clarity_overall_crosstab.csv`](../ANALYSIS/outputs/tables/crispdm_speaker_clarity_overall_crosstab.csv), [`crispdm_speaker_clarity_overall_summary.csv`](../ANALYSIS/outputs/tables/crispdm_speaker_clarity_overall_summary.csv), and [`crispdm_association_summary.csv`](../ANALYSIS/outputs/tables/crispdm_association_summary.csv).
+
+![Speaker clarity and overall rating heatmap](../ANALYSIS/outputs/figures/speaker_clarity_overall_heatmap.png)
+
+*Figure 3.8. Counts in the cross-tabulation of speaker-clarity and overall-session-rating responses. The heatmap visualizes association and does not imply causation.*
 
 ## Open-ended feedback
 
@@ -73,6 +105,18 @@ The qualitative unit was one respondent answer to one open-ended prompt. Multipl
 AI use was the most frequent substantive code, followed by broader software-development comments and TDD or testing comments. Explanation and clarity was the most frequent valued-delivery code. Requests for more examples and more interaction were the most frequent improvement codes. Technical-quality comments were less frequent, with two assignments involving two respondents. The coding output with respondent denominators is [`crispdm_theme_counts_with_denominators.csv`](../ANALYSIS/outputs/tables/crispdm_theme_counts_with_denominators.csv).
 
 The coding record also marked 99 assignments as `NO_SUBSTANTIVE_RESPONSE`, involving 47 respondents across the four prompts. These counts are not additional findings about satisfaction; they document the amount of non-substantive material in the qualitative stream. By prompt, the no-substantive code appeared 9 times for learning-value responses, 10 times for liked-most responses, 38 times for improvement responses, and 42 times for additional comments. The prompt-by-code table is [`crispdm_theme_by_prompt.csv`](../ANALYSIS/outputs/tables/crispdm_theme_by_prompt.csv).
+
+![Substantive theme assignments](../ANALYSIS/outputs/figures/theme_assignments.png)
+
+*Figure 3.9. Frequencies of substantive coded assignments. Codes were not mutually exclusive, so assignment counts cannot be summed as if they represented unique participants.*
+
+![Theme by open-ended prompt](../ANALYSIS/outputs/figures/theme_by_prompt_heatmap.png)
+
+*Figure 3.10. Distribution of substantive codes across the four open-ended prompts. The no-substantive code is excluded from this display to keep the substantive patterns readable.*
+
+![Normalization sensitivity](../ANALYSIS/outputs/figures/normalization_sensitivity.png)
+
+*Figure 3.11. Raw and normalized primary-item means. The paired points show the descriptive effect of reversing the two flagged respondents' primary Likert entries from 1 to 5; summary anchors were not changed.*
 
 ## Integration of the two strands
 

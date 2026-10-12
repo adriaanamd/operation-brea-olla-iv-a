@@ -50,7 +50,7 @@ def normalize_rating_frame(
     normalized = ratings.copy()
     flagged_set = set(flagged_ids)
     audit_rows: list[dict] = []
-    for respondent_id in flagged_set:
+    for respondent_id in sorted(flagged_set):
         mask = normalized["respondent_id"].eq(respondent_id)
         for key in PRIMARY_ITEM_KEYS:
             raw_value = normalized.loc[mask, key].iloc[0]
