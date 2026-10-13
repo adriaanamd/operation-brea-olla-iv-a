@@ -2,19 +2,19 @@
 
 The results are organized around the evaluation objectives: the perceived quality of the session, the respondent and institutional profile, the feedback participants reported in the open-ended prompts, and the way the two evidence streams relate. All quantitative values below were read from the Conda-generated outputs in `ANALYSIS/outputs/`.
 
-## CRISP-DM 1 — Business understanding
+## Evaluation objective
 
 The analysis addressed three decision needs: identify which aspects of the webinar were perceived as strong, identify what participants reported learning or valuing, and identify specific improvements for a subsequent session. The decision prompts were deliberately bounded to immediate participant perceptions and reported feedback; they were not framed as a test of causal learning impact. The handoff prompts are available in [`crispdm_decision_prompts.csv`](../ANALYSIS/outputs/tables/crispdm_decision_prompts.csv).
 
-## CRISP-DM 2 — Data understanding
+## Analytic dataset
 
 The analytic grain was one submitted evaluation row. The export contained 52 rows and 24 source fields: 13 primary Likert items, two separate summary ratings, and four open-ended prompts, in addition to administrative and consent fields. The profile and validation outputs are [`crispdm_data_profile.csv`](../ANALYSIS/outputs/tables/crispdm_data_profile.csv) and [`crispdm_validation_summary.csv`](../ANALYSIS/outputs/tables/crispdm_validation_summary.csv). The institution and response-pattern displays below remain descriptive because recorded labels were not harmonized and no verified attendance denominator was available.
 
-## CRISP-DM 3 — Data preparation and normalization
+## Rating preparation and normalization
 
 The pipeline parsed the five-point responses into stable analysis fields, generated de-identified row IDs, preserved the raw export, and checked missingness and range validity. Two rows matched the pre-specified scale-direction flag: all 13 primary items were recorded as `1` while both summary ratings were at least `4`. Only those 26 primary-item cells were reverse-normalized with `6 - raw`; the summary ratings were retained as anchors. The field-level audit is [`normalization_audit.csv`](../ANALYSIS/outputs/tables/normalization_audit.csv), and the raw-versus-normalized sensitivity table is [`crispdm_normalization_sensitivity.csv`](../ANALYSIS/outputs/tables/crispdm_normalization_sensitivity.csv).
 
-## CRISP-DM 4 — Descriptive modeling and analysis
+## Quantitative and qualitative results
 
 In this evaluation, modeling meant descriptive and exploratory analysis rather than prediction. The figures and tables below report normalized Likert distributions, bootstrap intervals for item means, Wilson intervals for agreement proportions, a descriptive respondent-level composite, an ordinal cross-tabulation, and analyst-coded themes.
 
@@ -52,7 +52,7 @@ The 13 primary statements were summarized on the normalized 1-5 Likert scale. Th
 
 The item means ranged from 4.5577 to 4.7308. Presentation materials received the highest mean and top-box rate, while speaker clarity received the lowest mean and top-box rate. The engagement item had the lowest agreement rate at 92.31%, although it still had a high mean of 4.6154. These rankings identify relative differences within this respondent set; they do not establish meaningful population differences or a causal hierarchy among session components. The source table is [`crispdm_quantitative_metrics.csv`](../ANALYSIS/outputs/tables/crispdm_quantitative_metrics.csv), with the response distribution in [`likert_distributions.csv`](../ANALYSIS/outputs/tables/likert_distributions.csv).
 
-The CRISP-DM metric output also shows why the ranking should be interpreted cautiously. The bootstrap interval for presentation materials was 4.5962-4.8654, while the interval for speaker clarity was 4.4038-4.7115; the intervals overlap. Thus, the output supports a descriptive ordering of dimensions, not a claim that materials performed significantly better than clarity. The Wilson interval for engagement agreement was 81.83%-96.97%, which retains uncertainty around the observed 92.31% proportion in this available respondent set.
+The generated metric output also shows why the ranking should be interpreted cautiously. The bootstrap interval for presentation materials was 4.5962-4.8654, while the interval for speaker clarity was 4.4038-4.7115; the intervals overlap. Thus, the output supports a descriptive ordering of dimensions, not a claim that materials performed significantly better than clarity. The Wilson interval for engagement agreement was 81.83%-96.97%, which retains uncertainty around the observed 92.31% proportion in this available respondent set.
 
 The separate summary ratings were also favorable:
 
@@ -124,7 +124,7 @@ AI use was the most frequent substantive code, followed by broader software-deve
 
 The coding record also marked 99 assignments as `NO_SUBSTANTIVE_RESPONSE`, involving 47 respondents across the four prompts. These counts are not additional findings about satisfaction; they document the amount of non-substantive material in the qualitative stream. By prompt, the no-substantive code appeared 9 times for learning-value responses, 10 times for liked-most responses, 38 times for improvement responses, and 42 times for additional comments. The prompt-by-code table is [`crispdm_theme_by_prompt.csv`](../ANALYSIS/outputs/tables/crispdm_theme_by_prompt.csv).
 
-The prompt-level CRISP-DM output changes the meaning of the aggregate theme ranking. Learning-value responses were concentrated in AI use (22 assignments), software development (21), and TDD/testing (14). Liked-most responses emphasized explanation and clarity (17), AI use (14), and demonstrations (11). Improvement responses emphasized more examples (7), more interaction (5), and more depth (3). Additional comments contained 42 no-substantive assignments, so that prompt was less informative for explaining the session than the other three. These are coded assignments rather than mutually exclusive respondent categories; the complete prompt matrix is [`crispdm_theme_by_prompt.csv`](../ANALYSIS/outputs/tables/crispdm_theme_by_prompt.csv).
+The prompt-level output changes the meaning of the aggregate theme ranking. Learning-value responses were concentrated in AI use (22 assignments), software development (21), and TDD/testing (14). Liked-most responses emphasized explanation and clarity (17), AI use (14), and demonstrations (11). Improvement responses emphasized more examples (7), more interaction (5), and more depth (3). Additional comments contained 42 no-substantive assignments, so that prompt was less informative for explaining the session than the other three. These are coded assignments rather than mutually exclusive respondent categories; the complete prompt matrix is [`crispdm_theme_by_prompt.csv`](../ANALYSIS/outputs/tables/crispdm_theme_by_prompt.csv).
 
 ![Substantive theme assignments](../ANALYSIS/outputs/figures/theme_assignments.png)
 
@@ -138,7 +138,7 @@ The prompt-level CRISP-DM output changes the meaning of the aggregate theme rank
 
 *Figure 3.11. Raw and normalized primary-item means. The paired points show the descriptive effect of reversing the two flagged respondents' primary Likert entries from 1 to 5; summary anchors were not changed.*
 
-## CRISP-DM 5 — Evaluation and mixed-methods integration
+## Cross-stream evaluation
 
 The evaluation phase checked whether the prepared data remained valid, whether the normalization decision materially changed the descriptive pattern, and whether the quantitative and qualitative strands supplied complementary evidence. The validation record is [`crispdm_validation_summary.csv`](../ANALYSIS/outputs/tables/crispdm_validation_summary.csv), the sensitivity table is [`crispdm_normalization_sensitivity.csv`](../ANALYSIS/outputs/tables/crispdm_normalization_sensitivity.csv), and the integrated evidence matrix is [`mixed_methods_evidence_matrix.csv`](../ANALYSIS/outputs/tables/mixed_methods_evidence_matrix.csv).
 
@@ -146,9 +146,9 @@ The evaluation phase checked whether the prepared data remained valid, whether t
 
 The two evidence streams pointed in a broadly similar direction. Ratings were high across the 13 primary items, while the comments most often referred to AI use, software development, testing, clarity, demonstrations, and practical relevance. The qualitative material also added information that the rating averages could not show: some respondents wanted more examples, more interaction, more depth, or improved technical quality. The resulting interpretation is therefore positive but not unqualified. Participants generally reported a favorable experience, while the coded feedback identified concrete ways to increase practice and participation. The generated mixed-methods matrix is available in [`mixed_methods_evidence_matrix.csv`](../ANALYSIS/outputs/tables/mixed_methods_evidence_matrix.csv).
 
-## CRISP-DM 6 — Deployment and decision handoff
+## Decision handoff
 
-The deployment phase translated the verified outputs into bounded decision cues for the next webinar or evaluation cycle. These are handoff recommendations, not causal claims about what will improve learning.
+The decision-handoff stage translated the verified outputs into bounded decision cues for the next webinar or evaluation cycle. These are handoff recommendations, not causal claims about what will improve learning.
 
 | Decision cue | Evidence from this evaluation | Handoff implication |
 | --- | --- | --- |
