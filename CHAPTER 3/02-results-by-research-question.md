@@ -24,13 +24,19 @@ In this evaluation, modeling meant descriptive and exploratory analysis rather t
 
 *Figure 3.1. Normalized means for the 13 primary Likert items with deterministic bootstrap 95% intervals. The display supports within-sample comparison and does not represent population-level inference.*
 
+Figure 3.1 shows that all 13 primary dimensions were positioned toward the positive end of the five-point scale. Presentation materials were farthest to the right, while speaker clarity was the lowest item mean; however, the intervals overlap. The figure therefore identifies the relative ordering of perceptions in this respondent set and the uncertainty around each mean, rather than a statistically established difference between dimensions.
+
 ![Primary-item means with interquartile ranges](../ANALYSIS/outputs/figures/likert_item_means_iqr.png)
 
 *Figure 3.2. Primary-item means with interquartile ranges, showing the concentration of responses on the upper end of the five-point scale.*
 
+Figure 3.2 shows that the middle 50% of responses was concentrated between ratings 4 and 5 for nearly every item. The points remain close to 5, while the interquartile ranges show that the distribution was compressed at the upper end. This visual concentration supports the interpretation that the evaluation had limited separation among highly rated session features.
+
 ![Distribution of primary Likert responses](../ANALYSIS/outputs/figures/likert_distribution.png)
 
 *Figure 3.3. Percentage distribution of ratings 1 through 5 for each primary item after the documented respondent-level normalization.*
+
+Figure 3.3 shows the full response composition rather than only the mean. Ratings 4 and 5 make up most of every stacked bar, with smaller portions at rating 3; no normalized primary-item response falls below 3 in the generated metric output. The figure explains why agreement percentages are high while top-box percentages remain lower: many respondents agreed without selecting the strongest possible rating.
 
 The 13 primary statements were summarized on the normalized 1-5 Likert scale. The agreement rate uses the pre-specified threshold of 4 or 5. The top-box rate is the percentage selecting 5. The full metric file also contains bootstrap 95% intervals for item means and Wilson 95% intervals for agreement proportions.
 
@@ -67,13 +73,19 @@ The primary-item composite had a mean of 4.6598 (SD = 0.4390; median = 4.9231), 
 
 *Figure 3.4. Agreement percentages (ratings 4-5) compared with top-box percentages (rating 5) for the primary items. Labels identify item numbers and do not imply ranking significance.*
 
+Figure 3.4 separates broad acceptance from the strongest endorsement. The primary items cluster at high agreement levels, but their top-box percentages vary more visibly. Speaker clarity illustrates the distinction: it retained 96.15% agreement but had the lowest top-box rate at 59.62%, whereas presentation materials reached 75.00% top-box. This indicates an opportunity to improve excellence-level responses even where basic agreement is already high.
+
 ![Summary rating distributions](../ANALYSIS/outputs/figures/summary_rating_distribution.png)
 
 *Figure 3.5. Response distributions for the overall session rating and overall satisfaction items.*
 
+Figure 3.5 shows that both summary items were dominated by ratings 4 and 5. Satisfaction had the higher mean and top-box rate—4.6731 and 69.23%—compared with 4.6154 and 63.46% for the overall session rating. The two distributions therefore provide a consistent positive summary while remaining separate from the 13-item experience matrix.
+
 ![Respondent-level composite distribution](../ANALYSIS/outputs/figures/composite_distribution.png)
 
 *Figure 3.6. Distribution of respondent-level means across the 13 normalized primary items, with the sample mean and median marked.*
+
+Figure 3.6 shows the respondent-level distribution behind the composite summary. The median of 4.9231 is above the mean of 4.6598, indicating that the typical response pattern was very positive while a smaller number of lower composite values reduced the average. The distribution is useful for describing concentration, but it does not establish that the 13 items form a validated scale.
 
 ### Respondent and institutional profile
 
@@ -84,6 +96,8 @@ The dataset contained no missing rating cells and no out-of-range rating cells. 
 ![Institution profile](../ANALYSIS/outputs/figures/institution_profile.png)
 
 *Figure 3.7. Exact institution labels as recorded in the export. Capitalization and spelling variants remain separate, so the figure is a data-profile display rather than a harmonized institutional count.*
+
+Figure 3.7 shows the composition of the available respondent set by exact recorded institution label. `Gordon College` is the largest exact category with 37 responses (71.15%), while the remaining 15 recorded categories occur once each. Because capitalization and spelling variants were not collapsed, the figure describes the export as received and should not be interpreted as a harmonized institutional reach estimate.
 
 ### Speaker clarity and overall rating
 
@@ -100,6 +114,8 @@ The ordinal association between speaker clarity and overall rating was Spearman 
 ![Speaker clarity and overall rating heatmap](../ANALYSIS/outputs/figures/speaker_clarity_overall_heatmap.png)
 
 *Figure 3.8. Counts in the cross-tabulation of speaker-clarity and overall-session-rating responses. The heatmap visualizes association and does not imply causation.*
+
+Figure 3.8 shows the concentration of responses in the upper-right portion of the cross-tab. Among the 31 respondents selecting clarity level 5, 26 also selected an overall rating of 5; among the 19 selecting clarity level 4, 7 selected an overall rating of 5. The pattern is consistent with the positive descriptive association, but the heatmap cannot distinguish clarity from shared response tendencies or other session characteristics.
 
 ### Open-ended feedback
 
@@ -130,13 +146,19 @@ The prompt-level output changes the meaning of the aggregate theme ranking. Lear
 
 *Figure 3.9. Frequencies of substantive coded assignments. Codes were not mutually exclusive, so assignment counts cannot be summed as if they represented unique participants.*
 
+Figure 3.9 shows the frequency of substantive codes after excluding `NO_SUBSTANTIVE_RESPONSE`. AI use is the most frequent theme at 36 assignments, followed by software development at 22 and TDD or software testing at 21. The bars represent coded ideas across answers, not the number of unique participants who learned each topic.
+
 ![Theme by open-ended prompt](../ANALYSIS/outputs/figures/theme_by_prompt_heatmap.png)
 
 *Figure 3.10. Distribution of substantive codes across the four open-ended prompts. The no-substantive code is excluded from this display to keep the substantive patterns readable.*
 
+Figure 3.10 shows that the meaning of a theme depends on the prompt. Learning-value responses emphasize AI use, software development, and TDD/testing; liked-most responses emphasize explanation and clarity, AI use, and demonstrations; improvement responses emphasize more examples and interaction. The heatmap therefore provides a more informative mixed-methods interpretation than a single pooled theme ranking.
+
 ![Normalization sensitivity](../ANALYSIS/outputs/figures/normalization_sensitivity.png)
 
 *Figure 3.11. Raw and normalized primary-item means. The paired points show the descriptive effect of reversing the two flagged respondents' primary Likert entries from 1 to 5; summary anchors were not changed.*
+
+Figure 3.11 shows a parallel upward shift from the raw to the normalized means for all 13 primary items. Each item increased by 0.1538 because the same two respondent rows were corrected in every primary field. The unchanged ordering indicates that the normalization affected the level of the descriptive results rather than which dimensions ranked highest or lowest.
 
 ## Cross-stream evaluation
 
